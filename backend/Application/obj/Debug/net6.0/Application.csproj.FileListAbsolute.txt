@@ -1,0 +1,17 @@
+D:\Users\giova\Desktop\AC\apibd2\Application\bin\Debug\net6.0\Application.deps.json
+D:\Users\giova\Desktop\AC\apibd2\Application\bin\Debug\net6.0\Application.dll
+D:\Users\giova\Desktop\AC\apibd2\Application\bin\Debug\net6.0\Application.pdb
+D:\Users\giova\Desktop\AC\apibd2\Application\bin\Debug\net6.0\Domain.dll
+D:\Users\giova\Desktop\AC\apibd2\Application\bin\Debug\net6.0\Persistence.dll
+D:\Users\giova\Desktop\AC\apibd2\Application\bin\Debug\net6.0\Persistence.pdb
+D:\Users\giova\Desktop\AC\apibd2\Application\bin\Debug\net6.0\Domain.pdb
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.dll
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\refint\Application.dll
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\Application.pdb
+D:\Users\giova\Desktop\AC\apibd2\Application\obj\Debug\net6.0\ref\Application.dll
