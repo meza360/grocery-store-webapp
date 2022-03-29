@@ -26,6 +26,7 @@ var app = builder.Build();
 //creating migrations automatically
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
+
 try
 {
     var context = services.GetRequiredService<DataContext>();
@@ -33,9 +34,13 @@ try
     var config = OracleEntityProviderConfig.Instance;
     config.Workarounds.DisableQuoting = true;
     
-    context.Database.EnsureCreated();
-    
-    //Console.WriteLine("Valor de creacion {0}", ss);
+    if (context.Database.EnsureCreated())
+    {
+        Console.WriteLine("La base de datos no esta creada");
+    }else
+    {
+        Console.WriteLine("La base de datos esta creada");
+    }
 }
 catch (Oracle.ManagedDataAccess.Client.OracleException ex)
 {

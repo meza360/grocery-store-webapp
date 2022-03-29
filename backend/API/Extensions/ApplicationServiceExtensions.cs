@@ -6,6 +6,7 @@ using Devart.Data.Oracle.Entity.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Oracle.EntityFrameworkCore;
 using MediatR;
 using Persistence;
 
@@ -36,7 +37,6 @@ namespace API.Extensions
                      opt.UseOracle(config.GetConnectionString("DevConnection"));
                      
             });
-
             
             services.AddAutoMapper(typeof(Application.Core.MappingProfiles).Assembly);
 
