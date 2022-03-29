@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj": {}
+    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj": {
+    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\obj\\",
+        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",

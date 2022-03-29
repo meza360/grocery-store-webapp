@@ -10,3 +10,15 @@ D:\Users\giova\Desktop\AC\apibd2\Domain\obj\Debug\net6.0\Domain.dll
 D:\Users\giova\Desktop\AC\apibd2\Domain\obj\Debug\net6.0\refint\Domain.dll
 D:\Users\giova\Desktop\AC\apibd2\Domain\obj\Debug\net6.0\Domain.pdb
 D:\Users\giova\Desktop\AC\apibd2\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\bin\Debug\net6.0\Domain.dll
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\bin\Debug\net6.0\Domain.pdb
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\Domain.dll
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\Domain.pdb
+D:\Users\giova\Desktop\ventas-online-bd2\backend\Domain\obj\Debug\net6.0\ref\Domain.dll

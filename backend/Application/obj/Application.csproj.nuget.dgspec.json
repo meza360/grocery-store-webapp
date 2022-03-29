@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Application\\Application.csproj": {}
+    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Application\\Application.csproj": {
+    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Application\\Application.csproj",
+        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Application\\obj\\",
+        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj"
+              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj"
               },
-              "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Persistence\\Persistence.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Persistence\\Persistence.csproj"
+              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj": {
+    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\obj\\",
+        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,14 +143,14 @@
         }
       }
     },
-    "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Persistence\\Persistence.csproj": {
+    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Persistence\\Persistence.csproj",
+        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Persistence\\obj\\",
+        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -167,8 +167,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj"
+              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj"
               }
             }
           }

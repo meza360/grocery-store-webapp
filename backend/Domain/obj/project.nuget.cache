@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rrnzFrSW5sa4LWznPIgZWOiTcJMrsroLWKOlO6/A5u70/yXu1wIVjAze4ShADpeQ+x4NSEVwgsxBGxH9DbLHig==",
+  "dgSpecHash": "N5z/5x9Ekc1amxnKOwzuCdiEvVChp9n6i6HjsDdtWp/h+JOCbC9Ko+DiGRtDstFIHqARM4xVncPUd//BFyjmiQ==",
   "success": true,
-  "projectFilePath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GM3006\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\GM3006\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.3\\microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",

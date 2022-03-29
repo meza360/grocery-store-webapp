@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5WEmx9QTkrMFK+dNTf3xJ9XYvjqvXaueLTpLX4vE0GzeMQNTMekAtcERIBkrRSYCSfkAO/ZaBU7fXLhxX1IjbQ==",
+  "dgSpecHash": "h7L/MvZw8dIKDUV8Oh8R8WJfpLhfqY441joxAPJKzfJeZjClDoPd4n6TzBtyuibXl/IMxN2xUcholiWbMeXycg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\giova\\Desktop\\AC\\apibd2\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GM3006\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\GM3006\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
