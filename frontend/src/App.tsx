@@ -9,7 +9,7 @@ function App() {
 			<NavBar />
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
-				<p>Hola Luis.</p>
+				<p>Hola compañeros de base de datos</p>
 				<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
 					Learn React
 				</a>
