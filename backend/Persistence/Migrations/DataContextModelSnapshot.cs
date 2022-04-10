@@ -24,24 +24,17 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Producto", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
-
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Categoria")
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<int?>("Id_ProveedorId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("RAW(16)");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("NVARCHAR2(2000)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Precio")
+                        .HasColumnType("NVARCHAR2(2000)");
 
-                    b.HasIndex("Id_ProveedorId");
+                    b.HasKey("Id");
 
                     b.ToTable("Producto");
                 });
@@ -60,15 +53,6 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Proveedor");
-                });
-
-            modelBuilder.Entity("Domain.Producto", b =>
-                {
-                    b.HasOne("Domain.Proveedor", "Id_Proveedor")
-                        .WithMany()
-                        .HasForeignKey("Id_ProveedorId");
-
-                    b.Navigation("Id_Proveedor");
                 });
 #pragma warning restore 612, 618
         }

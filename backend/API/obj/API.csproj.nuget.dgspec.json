@@ -1,38 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\API\\API.csproj": {}
+    "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj": {}
   },
   "projects": {
-    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\API\\API.csproj": {
+    "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\API\\API.csproj",
+        "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\API\\obj\\",
+        "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj",
+        "packagesPath": "/home/gm/.nuget/packages/",
+        "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gm/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj"
+              "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj": {
+                "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj"
               },
-              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj"
+              "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj": {
+                "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj"
               }
             }
           }
@@ -100,39 +98,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj": {
+    "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj",
+        "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Application\\obj\\",
+        "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj",
+        "packagesPath": "/home/gm/.nuget/packages/",
+        "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gm/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj"
+              "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj": {
+                "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj"
               },
-              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj"
+              "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj": {
+                "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj"
               }
             }
           }
@@ -175,28 +171,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {
+    "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\obj\\",
+        "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
+        "packagesPath": "/home/gm/.nuget/packages/",
+        "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gm/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -239,36 +233,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj": {
+    "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\GM3006\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Persistence\\obj\\",
+        "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
+        "packagesPath": "/home/gm/.nuget/packages/",
+        "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GM3006\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gm/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Users\\giova\\Desktop\\ventas-online-bd2\\backend\\Domain\\Domain.csproj"
+              "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj": {
+                "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj"
               }
             }
           }
@@ -313,7 +305,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }

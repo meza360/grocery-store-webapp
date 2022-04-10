@@ -53,7 +53,7 @@
         "runtime": {
           "lib/netstandard2.0/Devart.Data.dll": {
             "assemblyVersion": "5.0.2858.0",
-            "fileVersion": "5.0.2858.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -81,7 +81,7 @@
         "runtime": {
           "lib/netstandard2.1/Devart.Data.Oracle.Entity.EF6.dll": {
             "assemblyVersion": "9.16.1434.0",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "9.16.1434.0"
           }
         }
       },
@@ -325,7 +325,7 @@
         "runtime": {
           "lib/netstandard2.1/Oracle.ManagedDataAccess.dll": {
             "assemblyVersion": "3.1.21.1",
-            "fileVersion": "3.1.21.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -341,7 +341,7 @@
           "runtimes/win-arm64/native/sni.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -350,7 +350,7 @@
           "runtimes/win-x64/native/sni.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -359,7 +359,7 @@
           "runtimes/win-x86/native/sni.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },

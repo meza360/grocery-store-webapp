@@ -241,7 +241,7 @@
         "runtime": {
           "lib/netstandard2.1/Oracle.ManagedDataAccess.dll": {
             "assemblyVersion": "3.1.21.1",
-            "fileVersion": "3.1.21.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },

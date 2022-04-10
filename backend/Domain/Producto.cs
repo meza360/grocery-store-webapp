@@ -13,12 +13,9 @@ namespace Domain
     
     public class Producto
     {
-        
-        public int Id { get; set; }
-
+        public Guid Id { get; set; }
         public string Nombre { get; set; }
-        public string Categoria { get; set; }
+        public string Precio { get; set; }
 
-        public Proveedor Id_Proveedor { get; set; }
     }
 }
