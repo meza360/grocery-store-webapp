@@ -38,3 +38,25 @@ INSERT INTO "Producto" VALUES(4,'Maseca','comida',3);
 INSERT INTO "Producto" VALUES(5,'Aceite','comida',4);
 INSERT INTO "Producto" VALUES(6,'Aceite','comida',6);
 INSERT INTO "Producto" VALUES(7,'Azucar','comida',4);
+
+
+
+/*SCRIPT PARA PRUEBA DE API CON IMAGENES V1*/
+CREATE TABLE PRODUCTO(
+CODIGO_PRODUCTO RAW(16),
+NOMBRE VARCHAR2(50),
+PRECIO NUMBER(8,2)
+);
+
+BEGIN
+FOR X IN 1..100 LOOP
+    INSERT INTO "Producto" VALUES(SYS_GUID(),'PROD_' || X, X*3.5);
+END LOOP;
+END;
+
+
+SELECT * FROM "PRODUCTO";
+SELECT * FROM "Producto";
+
+
+COMMIT;
