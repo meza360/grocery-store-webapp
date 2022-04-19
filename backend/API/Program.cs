@@ -54,13 +54,21 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//Routing and binding
 app.UseRouting();
+app.UseHttpsRedirection();
+
+//Address to bind
+app.Urls.Add("http://192.168.0.150:5000");
+app.Urls.Add("http://192.168.0.150:5001");
+
+//Cross Object Resource Policy
 app.UseCors("CorsPolicy");
 
-//app.UseHttpsRedirection();
-
-//app.UseAuthorization();
+app.UseAuthorization();
 
 app.MapControllers();
+
+
 
 app.Run();

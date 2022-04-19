@@ -1,0 +1,17 @@
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/bin/Release/net6.0/Persistence.deps.json
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/bin/Release/net6.0/Persistence.runtimeconfig.json
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/bin/Release/net6.0/Persistence.dll
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/bin/Release/net6.0/ref/Persistence.dll
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/bin/Release/net6.0/Persistence.pdb
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/bin/Release/net6.0/Domain.dll
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/bin/Release/net6.0/Domain.pdb
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.csproj.AssemblyReference.cache
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.AssemblyInfoInputs.cache
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.AssemblyInfo.cs
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.csproj.CoreCompileInputs.cache
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.csproj.CopyComplete
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.dll
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/ref/Persistence.dll
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.pdb
+/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/Release/net6.0/Persistence.genruntimeconfig.cache
