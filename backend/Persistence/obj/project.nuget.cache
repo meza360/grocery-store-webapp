@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jT0id5YVJqYqxw7LhLWE0b45bhZPB8sZGQns810OxqOavSCc5RCeuqQLLBfIdRY+EC+5CH5pe0watSa5dlnTSw==",
+  "dgSpecHash": "rs8fkcOAhF/YR733C658IOcRDlKorq7579gpXyMZ7fM2mx0KQKk2oM4nYuouE5fIv54IkO7ZLry6wQVaCa5gWA==",
   "success": true,
   "projectFilePath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,10 @@
     "/home/gm/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
     "/home/gm/.nuget/packages/oracle.entityframeworkcore/6.21.5/oracle.entityframeworkcore.6.21.5.nupkg.sha512",
     "/home/gm/.nuget/packages/oracle.manageddataaccess.core/3.21.50/oracle.manageddataaccess.core.3.21.50.nupkg.sha512",
+    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.app/2.2.8/runtime.linux-x64.microsoft.netcore.app.2.2.8.nupkg.sha512",
+    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.dotnetapphost/2.2.8/runtime.linux-x64.microsoft.netcore.dotnetapphost.2.2.8.nupkg.sha512",
+    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.dotnethostpolicy/2.2.8/runtime.linux-x64.microsoft.netcore.dotnethostpolicy.2.2.8.nupkg.sha512",
+    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.dotnethostresolver/2.2.8/runtime.linux-x64.microsoft.netcore.dotnethostresolver.2.2.8.nupkg.sha512",
     "/home/gm/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/home/gm/.nuget/packages/system.configuration.configurationmanager/6.0.0/system.configuration.configurationmanager.6.0.0.nupkg.sha512",
     "/home/gm/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

@@ -31,10 +31,9 @@ namespace API.Extensions
                
             });
 
-            bool quoting = OracleEntityProviderConfig.Instance.Workarounds.DisableQuoting;
-            quoting = true;
             services.AddDbContext<DataContext>(opt =>{
-                     opt.UseOracle(config.GetConnectionString("DevConnection"));
+                     //opt.UseOracle(config.GetConnectionString("DevConnection"));
+                     opt.UseOracle(config.GetConnectionString("Rac1Connection"));
                      
             });
             
