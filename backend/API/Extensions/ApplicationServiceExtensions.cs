@@ -32,7 +32,8 @@ namespace API.Extensions
             });
 
             services.AddDbContext<DataContext>(opt =>{
-                     opt.UseOracle(config.GetConnectionString("DevConnection"));
+                     //opt.UseOracle(config.GetConnectionString("DevConnection"));
+                     opt.UseOracle(config.GetConnectionString("Rac1Connection"));
                      
             });
             
