@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Oracle.EntityFrameworkCore;
 using Oracle.ManagedDataAccess;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace Domain
@@ -13,9 +14,15 @@ namespace Domain
     
     public class Producto
     {
-        public Guid Id { get; set; }
-        public string Nombre { get; set; }
-        public string Precio { get; set; }
+        [Key]
+        public int Sku_Id { get; set; }
+        public string Nombre_Producto { get; set; }
+        public string Descripcion { get; set; }
+        public char Activo { get; set; }
+        public decimal Precio { get; set; }
+        public ICollection<Proveedor> Proveedor { get; set; }
+
+
 
     }
 }

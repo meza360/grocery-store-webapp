@@ -90,12 +90,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[6.0.3, 6.0.3]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -104,12 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.104/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -182,12 +171,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.104/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -249,12 +233,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.104/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -326,12 +305,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.104/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "awtIVd31ldiIJ6uQ3u82SuXv6aY2ylz/NHGKuRI1zDwEDfQvPuMlEfzqS5XEVJuQNsA27+lo/jy4bYvWKjWcYw==",
+  "dgSpecHash": "U7suHiJ1QnCCTV+xmoNO7csNC9ksUB+gBKmTwAQYmLSiDEzs20phRK1X5K48ai3XxC+64m42hlfqhpKZrbOO1Q==",
   "success": true,
   "projectFilePath": "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj",
   "expectedPackageFiles": [
@@ -42,10 +42,6 @@
     "/home/gm/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
     "/home/gm/.nuget/packages/oracle.entityframeworkcore/6.21.5/oracle.entityframeworkcore.6.21.5.nupkg.sha512",
     "/home/gm/.nuget/packages/oracle.manageddataaccess.core/3.21.50/oracle.manageddataaccess.core.3.21.50.nupkg.sha512",
-    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.app/2.2.8/runtime.linux-x64.microsoft.netcore.app.2.2.8.nupkg.sha512",
-    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.dotnetapphost/2.2.8/runtime.linux-x64.microsoft.netcore.dotnetapphost.2.2.8.nupkg.sha512",
-    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.dotnethostpolicy/2.2.8/runtime.linux-x64.microsoft.netcore.dotnethostpolicy.2.2.8.nupkg.sha512",
-    "/home/gm/.nuget/packages/runtime.linux-x64.microsoft.netcore.dotnethostresolver/2.2.8/runtime.linux-x64.microsoft.netcore.dotnethostresolver.2.2.8.nupkg.sha512",
     "/home/gm/.nuget/packages/runtime.native.system.data.sqlclient.sni/4.7.0/runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "/home/gm/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/home/gm/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -79,8 +75,7 @@
     "/home/gm/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/home/gm/.nuget/packages/system.text.encoding.codepages/4.5.0/system.text.encoding.codepages.4.5.0.nupkg.sha512",
     "/home/gm/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
-    "/home/gm/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
-    "/home/gm/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.3/microsoft.netcore.app.host.linux-x64.6.0.3.nupkg.sha512"
+    "/home/gm/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,5 +1,8 @@
 export interface Producto {
-	id: string;
-	nombre: string;
-	precio: string;
+	sku_Id: number;
+	nombre_Producto: string;
+	descripcion: string;
+	activo: string;
+	precio: number;
+	proveedor: any;
 }

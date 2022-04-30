@@ -4,12 +4,14 @@ import NavigationBar from './app/layout/NavigationBar';
 import logo from './logo.svg';
 import axios from 'axios';
 import { Producto } from './app/models/Producto';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
 	const [ productos, setProductos ] = useState<Producto[]>();
 
 	useEffect(() => {
 		axios.get<Producto[]>('http://192.168.0.150:5000/api/producto').then((response) => {
+		//axios.get<Producto[]>('http://10.0.2.6:5000/api/producto').then((response) => {
 			console.log(response.data);
 			setProductos(response.data);
 		});
@@ -18,6 +20,7 @@ function App() {
 	return (
 		<Container className="App">
 			<NavigationBar />
+
 
 			<header /*<!-- Header-->*/ className="bg-dark py-5">
 				<Container className="px-4 px-lg-5 my-5">
@@ -31,17 +34,17 @@ function App() {
 			<div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 			{
 				productos?.map((producto) =>(
-					<div className="col mb-5" key={producto.id}>
+					<div className="col mb-5" key={producto.sku_Id}>
 					<div className="card h-100">
 						
-						<Image className="card-img-top" src="./assets/svg/apple.svg" alt="..." fluid/>
+						<Image className="card-img-top" src={`./assets/svg/${producto.nombre_Producto}.svg`} alt="..." fluid/>
 						
 						<div className="card-body p-4">
 							<div className="text-center">
 								
-								<h5 className="fw-bolder">{producto.nombre}</h5>
+								<h5 className="fw-bolder">{producto.nombre_Producto}</h5>
 								
-								{producto.precio}
+								Q.{producto.precio}
 							</div>
 						</div>
 						

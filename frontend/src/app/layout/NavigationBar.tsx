@@ -1,10 +1,18 @@
 import React from 'react';
 import { Badge, Button, Container, Form, Navbar, NavDropdown } from 'react-bootstrap';
+import { Routes, Route, Link } from 'react-router-dom';
 
 function NavigationBar() {
 	return (
 		<Container>
 			<Navbar className="navbar navbar-expand-lg navbar-light bg-light">
+				<Routes>
+					<Route path="/" element={NavigationBar} />
+					<Route path="/detalles" element={NavigationBar} />
+					<Route path="/login" element={NavigationBar} />
+					<Route path="/cuenta" element={NavigationBar} />
+				</Routes>
+
 				<Container className="container px-4 px-lg-5">
 					<Navbar.Brand className="">Abarroteria UMG</Navbar.Brand>
 					<Button className="navbar-toggler" type="button" aria-label="Toggle navigation" variant="secondary">
@@ -13,9 +21,9 @@ function NavigationBar() {
 					<Container className="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
 							<li className="nav-item">
-								<a className="nav-link active" aria-current="page" href="#!">
+								<Link to="/" className="nav-link active" aria-current="page">
 									Pagina principal
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
 								<a className="nav-link" href="#!">
