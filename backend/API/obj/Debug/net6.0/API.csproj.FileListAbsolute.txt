@@ -229,3 +229,4 @@ D:/Users/giova/Desktop/ventas-online-bd2/backend/API/obj/Debug/net6.0/ref/API.dl
 /home/gm/Downloads/ventas-online-bd2/backend/API/obj/Debug/net6.0/scopedcss/bundle/API.styles.css
 /home/gm/Downloads/ventas-online-bd2/backend/API/obj/Debug/net6.0/API.csproj.CopyComplete
 /home/gm/Downloads/ventas-online-bd2/backend/API/obj/Debug/net6.0/API.genruntimeconfig.cache
+/home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/mono_crash.2207df118e.0.json
