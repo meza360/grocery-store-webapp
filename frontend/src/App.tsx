@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Card, Image, Button, Stack, Col, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import NavigationBar from './app/components/NavigationBar';
-import logo from './logo.svg';
 import axios from 'axios';
 import { Producto } from './app/models/Producto';
 import { Route, Routes } from 'react-router-dom';
@@ -9,6 +8,14 @@ import ListarProductos from './app/layout/ListarProductos';
 import DetalleProducto from './app/layout/DetalleProducto';
 import { observer } from 'mobx-react-lite';
 import Footer from './app/components/Footer';
+import CarritoCompras from './app/layout/CarritoCompras';
+import CarritoPago from './app/layout/CarritoPago';
+import CarritoConfirmacion from './app/layout/CarritoConfirmacion';
+import Registro from './app/layout/Registro';
+import InicioSesion from './app/layout/InicioSesion';
+import CuentaOrdenes from './app/layout/CuentaOrdenes';
+import CuentaTarjetas from './app/layout/CuentaTarjetas';
+import CuentaDetalles from './app/layout/CuentaDetalles';
 
 function App() {
 	const [ productos, setProductos ] = useState<Producto[]>();
@@ -28,6 +35,14 @@ function App() {
 				<Routes>
 					<Route path="/" element={<ListarProductos />} />
 					<Route path="/detalleProducto" element={<DetalleProducto />} />
+					<Route path="/carritoCompras" element={<CarritoCompras />} />
+					<Route path="/carritoPago" element={<CarritoPago />} />
+					<Route path="/carritoConfirmacion" element={<CarritoConfirmacion />} />
+					<Route path="/registro" element={<Registro />} />
+					<Route path="/inicioSesion" element={<InicioSesion />} />
+					<Route path="/cuentaOrdenes" element={<CuentaOrdenes />} />
+					<Route path="/cuentaTarjeta" element={<CuentaTarjetas />} />
+					<Route path="/cuentaDetalles" element={<CuentaDetalles />} />
 				</Routes>
 			</Container>
 			<Footer />
