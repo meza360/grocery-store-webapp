@@ -4,6 +4,8 @@ import { Producto } from '../models/Producto';
 
 export default class ProductoStore {
 	productos: Producto[] = [];
+	carrito: Producto[] = [];
+	registroProducto = new Map<string, Producto>();
 	productoSeleccionado: Producto | undefined = undefined;
 	editMode = false;
 	cargando = false;
@@ -17,15 +19,16 @@ export default class ProductoStore {
 		this.cargandoInicial = state;
 	};
 
-	setProductoSeleccionado = (id: number) => {
-		this.productoSeleccionado = this.productos.find((a) => a.sku_Id === id);
+	setProductoSeleccionado = (id: string) => {
+		//this.productoSeleccionado = this.productos.find((a) => a.sku_Id === id);
+		this.productoSeleccionado = this.registroProducto.get(id);
 	};
 
 	cancelProductoSeleccionado = () => {
 		this.productoSeleccionado = undefined;
 	};
 
-	abrirFormulario = (id?: number) => {
+	abrirFormulario = (id?: string) => {
 		id ? this.setProductoSeleccionado(id) : this.cancelProductoSeleccionado();
 		this.editMode = true;
 	};
@@ -43,11 +46,13 @@ export default class ProductoStore {
 	};
 
 	cargarProductos = async () => {
-		this.cargando = true;
+		this.setCargandoInicial(true);
 		try {
 			const productos = await agent.Productos.listar();
 			productos.forEach((producto) => {
-				this.productos.push(producto);
+				//this.productos.push(producto);
+				this.setProducto(producto);
+				//this.registroProducto.set(producto.sku_Id,producto);
 			});
 			this.setCargandoInicial(false);
 		} catch (error) {
@@ -55,4 +60,50 @@ export default class ProductoStore {
 			this.setCargandoInicial(false);
 		}
 	};
+
+	cargarProducto = async (id: string) => {
+		this.setCargandoInicial(true);
+		let producto = this.getProducto(id);
+		if (producto) {
+			this.productoSeleccionado = producto;
+		} else {
+			this.setCargandoInicial(true);
+			try {
+				producto = await agent.Productos.detalles(id);
+				this.setProducto(producto);
+				this.setProductoSeleccionado(producto.sku_Id);
+				this.setCargandoInicial(false);
+			} catch (error) {
+				console.log(error);
+				this.setCargandoInicial(false);
+			}
+		}
+	};
+
+	agregarCarrito = (id: string) => {
+		let producto = this.getProducto(id);
+		this.carrito.push(producto);
+		console.log('Producto agregado al carrito: ' + producto.nombre_Producto);
+	};
+
+	quitarCarrito = (id: string) => {
+		let prod = this.carrito.findIndex((a) => a.sku_Id === id);
+		this.carrito.splice(prod, 1);
+	};
+
+	get listadoCarrito() {
+		return this.carrito;
+	}
+
+	private setProducto = (producto: Producto) => {
+		this.registroProducto.set(producto.sku_Id, producto);
+	};
+
+	private getProducto = (id: string) => {
+		return this.registroProducto.get(id);
+	};
+
+	get listadoProductos() {
+		return Array.from(this.registroProducto.values());
+	}
 }

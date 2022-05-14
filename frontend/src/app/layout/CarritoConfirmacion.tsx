@@ -17,7 +17,7 @@ function CarritoConfirmacion() {
 								/>
 								<h2 className="text-center">Pago confirmado</h2>
 								<p>Gracias por su compra. Puede consultar los pedidos desde la pagina de su cuenta</p>
-								<Button href="shop.html" className="btn btn-main mt-20">
+								<Button href="/" className="btn btn-main mt-20">
 									Continuar comprando
 								</Button>
 							</div>

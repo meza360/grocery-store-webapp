@@ -1,6 +1,10 @@
 import React, { Fragment } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Button, Image } from 'react-bootstrap';
+import NavegacionCuenta from '../components/NavegacionCuenta';
+import { Route, Routes } from 'react-router-dom';
+import CuentaOrdenes from './CuentaOrdenes';
+import CuentaTarjetas from './CuentaTarjetas';
 
 function CuentaDetalles() {
 	return (
@@ -8,22 +12,8 @@ function CuentaDetalles() {
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
-						<ul className="list-inline dashboard-menu text-center">
-							<li>
-								<a href="dashboard.html">Dashboard</a>
-							</li>
-							<li>
-								<a href="order.html">Orders</a>
-							</li>
-							<li>
-								<a href="address.html">Address</a>
-							</li>
-							<li>
-								<a className="active" href="profile-details.html">
-									Profile Details
-								</a>
-							</li>
-						</ul>
+						<NavegacionCuenta />
+						
 						<div className="dashboard-wrapper dashboard-user-profile">
 							<div className="media">
 								<div className="pull-left text-center">

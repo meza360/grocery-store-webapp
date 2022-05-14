@@ -11801,6 +11801,10 @@ fieldset:disabled .btn {
 /*Footer*/
 
 .footer {
-	position: sticky;
+	position: relative;
 	bottom: 0;
+}
+.app {
+	min-height: 100vh;
+	height: 100vh;
 }

@@ -1,9 +1,33 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Input } from 'semantic-ui-react';
-import { Button, Container, Image } from 'react-bootstrap';
+import { Button, Container, Image, NavItem } from 'react-bootstrap';
+import { useStore } from '../../app/stores/store';
+import { Producto } from '../../app/models/Producto';
+import PageLoader from '../components/PageLoader';
+import { useParams, Link } from 'react-router-dom';
 
 function DetalleProducto() {
+	const { productoStore } = useStore();
+	const {
+		productoSeleccionado: producto,
+		editMode,
+		cancelProductoSeleccionado,
+		cargarProducto,
+		cargandoInicial,
+		agregarCarrito
+	} = productoStore;
+	const { id } = useParams<{ id: string }>();
+
+	useEffect(
+		() => {
+			if (id) cargarProducto(id);
+		},
+		[ id, cargarProducto ]
+	);
+
+	if (productoStore.cargandoInicial || !producto) return <PageLoader />;
+
 	return (
 		<Fragment>
 			<Container className="">
@@ -12,21 +36,17 @@ function DetalleProducto() {
 						<Container className="col-md-6">
 							<Image
 								className="card-img-top mb-5 mb-md-0"
-								src={'./assets/svg/Cafe premium.svg'}
+								src={`../../assets/svg/${producto.nombre_Producto}.svg`}
 								alt="..."
 							/>
 						</Container>
 						<Container className="col-md-6">
-							<Container className="small mb-1">SKU_ID: BST-498</Container>
-							<h1 className="display-5 fw-bolder">Nombre_del_Producto</h1>
+							<Container className="md mb-1">SKU ID: {producto.sku_Id}</Container>
+							<h1 className="display-5 fw-bolder">{producto.nombre_Producto}</h1>
 							<Container className="fs-5 mb-5">
-								<span>Q40.00</span>
+								<span>Q.{producto.precio}</span>
 							</Container>
-							<p className="lead">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem
-								modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis
-								delectus ipsam minima ea iste laborum vero?
-							</p>
+							<p className="lead">{producto.descripcion}</p>
 							<Container className="d-flex">
 								<Input
 									className="form-control text-center me-3"
@@ -34,10 +54,15 @@ function DetalleProducto() {
 									type="number"
 									value="1"
 								/>
-								<Button className="btn btn-outline-dark flex-shrink-0">
+								<NavItem
+									as={Link}
+									to="/carritoCompras"
+									onClick={() => agregarCarrito(producto.sku_Id)}
+									className="btn btn-outline-dark flex-shrink-0"
+								>
 									<i className="bi-cart-fill me-1" />
 									Agregar al carrito
-								</Button>
+								</NavItem>
 							</Container>
 						</Container>
 					</Container>

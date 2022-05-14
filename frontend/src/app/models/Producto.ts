@@ -1,5 +1,5 @@
 export interface Producto {
-	sku_Id: number;
+	sku_Id: string;
 	nombre_Producto: string;
 	descripcion: string;
 	activo: string;

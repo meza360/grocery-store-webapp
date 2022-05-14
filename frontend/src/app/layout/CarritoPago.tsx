@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import React from 'react';
-import { Image, InputGroup, Form, FormGroup, FormLabel, FormControl, Button } from 'react-bootstrap';
+import { Image, InputGroup, Form, FormGroup, FormLabel, FormControl, Button, NavItem } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 function CarritoPago() {
 	return (
@@ -103,9 +104,13 @@ function CarritoPago() {
 														placeholder="CVC"
 													/>
 												</FormGroup>
-												<Button href="confirmation.html" className="mt-20">
+												<NavItem
+													as={NavLink}
+													to="/carritoConfirmacion"
+													className="btn btn-outline-dark mt-20"
+												>
 													Colocar orden
-												</Button>
+												</NavItem>
 											</Form>
 										</div>
 									</div>

@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 import { Form, FormGroup, FormControl, FormLabel, Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Registro() {
 	return (
@@ -36,10 +37,10 @@ function Registro() {
 								</div>
 							</Form>
 							<p className="mt-20">
-								¿Ya tienes una cuenta con nosotros?<a href="login.html">Iniciar sesion</a>
+								¿Ya tienes una cuenta con nosotros?<Link to="/inicioSesion">Iniciar sesion</Link>
 							</p>
 							<p>
-								<a href="forget-password.html">Rastrear pedido </a>
+								<Link to="/">Rastrear pedido </Link>
 							</p>
 						</div>
 					</div>

@@ -1,8 +1,13 @@
 import { observer } from 'mobx-react-lite';
 import React from 'react';
-import { Button, Image } from 'react-bootstrap';
+import { Button, Image, NavItem, FormControl } from 'react-bootstrap';
+import { NavLink, Link } from 'react-router-dom';
+import { useStore } from '../../app/stores/store';
 
 function CarritoCompras() {
+	const { productoStore } = useStore();
+	const { listadoCarrito, quitarCarrito } = productoStore;
+
 	return (
 		<div className="page-wrapper">
 			<div className="cart shopping">
@@ -16,70 +21,56 @@ function CarritoCompras() {
 											<thead>
 												<tr>
 													<th className="">Producto</th>
+													<th className="">Cantidad</th>
 													<th className="">Precio</th>
 													<th className="">Acciones</th>
 												</tr>
 											</thead>
 											<tbody>
-												<tr className="">
-													<td className="">
-														<div className="product-info">
-															<Image
-																width="80"
-																src="./assets/svg/Cafe premium.svg"
-																alt="image"
+												{listadoCarrito.map((producto) => (
+													<tr className="" key={producto.sku_Id}>
+														<td className="">
+															<div className="product-info">
+																<Image
+																	width="80"
+																	src={`../../assets/svg/${producto.nombre_Producto}.svg`}
+																	alt="image"
+																/>
+																<NavItem as={Link} to={`/producto/${producto.sku_Id}`}>
+																	{producto.nombre_Producto}
+																</NavItem>
+															</div>
+														</td>
+														<td className="">
+															<FormControl
+																className="form-control text-center me-3"
+																id="inputQuantity"
+																type="number"
+																readOnly
+																disabled
+																value="1"
 															/>
-															<a href="#!">Producto</a>
-														</div>
-													</td>
-													<td className="">Q.200.00</td>
-													<td className="">
-														<Button className="product-remove" href="#!">
-															Remove
-														</Button>
-													</td>
-												</tr>
-												<tr className="">
-													<td className="">
-														<div className="product-info">
-															<Image
-																width="80"
-																src="./assets/svg/Cafe premium.svg"
-																alt="image"
-															/>
-															<a href="#!">Producto</a>
-														</div>
-													</td>
-													<td className="">Q.200.00</td>
-													<td className="">
-														<Button className="product-remove" href="#!">
-															Remove
-														</Button>
-													</td>
-												</tr>
-												<tr className="">
-													<td className="">
-														<div className="product-info">
-															<Image
-																width="80"
-																src="./assets/svg/Cafe premium.svg"
-																alt="image"
-															/>
-															<a href="#!">Producto</a>
-														</div>
-													</td>
-													<td className="">Q.200.00</td>
-													<td className="">
-														<Button className="product-remove" href="#!">
-															Remove
-														</Button>
-													</td>
-												</tr>
+														</td>
+														<td className="">Q.{producto.precio}</td>
+														<td className="">
+															<Button
+																className="product-remove"
+																onClick={() => quitarCarrito(producto.sku_Id)}
+															>
+																Quitar del carrito
+															</Button>
+														</td>
+													</tr>
+												))}
 											</tbody>
 										</table>
-										<Button href="checkout.html" className="pull-right">
+										<NavItem
+											as={NavLink}
+											to="/carritoPago"
+											className="btn btn-outline-dark pull-right"
+										>
 											Proceder a pago
-										</Button>
+										</NavItem>
 									</form>
 								</div>
 							</div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { Form, FormGroup, FormControl, FormLabel, Image, Button } from 'react-bootstrap';
+import { Form, FormGroup, FormControl, FormLabel, Image, Button, NavItem } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function InicioSesion() {
 	return (
@@ -9,7 +10,7 @@ function InicioSesion() {
 				<div className="row">
 					<div className="col-md-12 col-md-offset-3">
 						<div className="block text-center">
-							<a className="logo" href="index.html">
+							<a className="logo">
 								<Image src="./assets/icons/umg.svg" alt="" />
 							</a>
 							<h2 className="text-center">Bienvenido de vuelta</h2>
@@ -25,13 +26,13 @@ function InicioSesion() {
 									<FormControl type="password" className="form-control" placeholder="Contraseña" />
 								</FormGroup>
 								<div className="text-center">
-									<Button type="submit" className="btn btn-main text-center">
+									<NavItem as={Link} to="/cuenta" className="btn btn-outline-dark text-center">
 										Iniciar sesion
-									</Button>
+									</NavItem>
 								</div>
 							</Form>
 							<p className="mt-20">
-								¿Eres nuevo en la pagina?<a href="signin.html">Crear una nueva cuenta</a>
+								¿Eres nuevo en la pagina?<Link to="/registro">Crear una nueva cuenta</Link>
 							</p>
 						</div>
 					</div>

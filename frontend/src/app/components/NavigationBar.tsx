@@ -1,8 +1,11 @@
 import React from 'react';
-import { Badge, Button, Container, Form, Navbar, NavDropdown, Image } from 'react-bootstrap';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Badge, Button, Container, Form, Navbar, NavItem, Nav, NavDropdown, Image } from 'react-bootstrap';
+import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { useStore } from '../stores/store';
 
 function NavigationBar() {
+	const { productoStore } = useStore();
+	const { listadoCarrito } = productoStore;
 	return (
 		<Container>
 			<Navbar className="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,7 +38,9 @@ function NavigationBar() {
 								role="Button"
 								aria-expanded="false"
 							>
-								<NavDropdown.Item>Todos los productos</NavDropdown.Item>
+								<NavDropdown.Item as={NavLink} to="/">
+									Todos los productos
+								</NavDropdown.Item>
 								<NavDropdown.Item>
 									<hr className="dropdown-divider" />
 								</NavDropdown.Item>
@@ -44,18 +49,17 @@ function NavigationBar() {
 							</NavDropdown>
 						</ul>
 						<Form className="d-flex">
-							<Button className="btn" variant="outline-dark" type="submit">
-								<i className="bi-cart-fill me-1" />
+							<NavItem className="btn" type="submit" as={NavLink} to="/inicioSesion">
 								<Image src="./assets/icons/cuenta.svg" height={'50'} />
 								Mi Cuenta
-							</Button>
+							</NavItem>
 
-							<Button className="btn" variant="outline-dark" type="submit">
+							<NavItem className="btn" type="submit" as={NavLink} to="/carritoCompras">
 								<i className="bi-cart-fill me-1" />
 								<Image src="./assets/icons/bolso.svg" height={'50'} />
 								Carrito de compras
-								<Badge className="bg-dark text-white ms-1 rounded-pill">7</Badge>
-							</Button>
+								<Badge className="bg-dark text-white ms-1 rounded-pill">{listadoCarrito.length}</Badge>
+							</NavItem>
 							<Button className="btn" variant="outline-dark" type="submit">
 								<Image src="./assets/icons/administrativo.svg" height={'50'} />
 								Administrativos

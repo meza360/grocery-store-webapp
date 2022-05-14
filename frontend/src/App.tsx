@@ -16,6 +16,8 @@ import InicioSesion from './app/layout/InicioSesion';
 import CuentaOrdenes from './app/layout/CuentaOrdenes';
 import CuentaTarjetas from './app/layout/CuentaTarjetas';
 import CuentaDetalles from './app/layout/CuentaDetalles';
+import Cuenta from './app/layout/Cuenta';
+import CuentaDirecciones from './app/layout/CuentaDirecciones';
 
 function App() {
 	const [ productos, setProductos ] = useState<Producto[]>();
@@ -29,20 +31,22 @@ function App() {
 	}, []);
 
 	return (
-		<Container className="App">
+		<Container className="app col-md-12">
 			<Container>
 				<NavigationBar />
 				<Routes>
 					<Route path="/" element={<ListarProductos />} />
-					<Route path="/detalleProducto" element={<DetalleProducto />} />
+					<Route path="/producto/:id" element={<DetalleProducto />} />
 					<Route path="/carritoCompras" element={<CarritoCompras />} />
 					<Route path="/carritoPago" element={<CarritoPago />} />
 					<Route path="/carritoConfirmacion" element={<CarritoConfirmacion />} />
 					<Route path="/registro" element={<Registro />} />
 					<Route path="/inicioSesion" element={<InicioSesion />} />
-					<Route path="/cuentaOrdenes" element={<CuentaOrdenes />} />
-					<Route path="/cuentaTarjeta" element={<CuentaTarjetas />} />
+					<Route path="/cuenta" element={<Cuenta />} />
 					<Route path="/cuentaDetalles" element={<CuentaDetalles />} />
+					<Route path="/cuentaOrdenes" element={<CuentaOrdenes />} />
+					<Route path="/cuentaDirecciones" element={<CuentaDirecciones />} />
+					<Route path="/cuentaTarjetas" element={<CuentaTarjetas />} />
 				</Routes>
 			</Container>
 			<Footer />
