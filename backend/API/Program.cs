@@ -30,7 +30,7 @@ var services = scope.ServiceProvider;
 try
 {
     var context = services.GetRequiredService<DataContext>();
-    await context.Database.MigrateAsync();
+    //await context.Database.MigrateAsync();
     
     if (context.Database.EnsureCreated())
     {

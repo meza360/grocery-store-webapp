@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "nSA/rmOSrFO6oaMMnCJd4Z0j9kFuRr886KG5vhTwmuWPEc2jm/vE3PoNGsvdKYk7OGgeP5b0USpNLoS7//FrRQ==",
+=======
+  "dgSpecHash": "HZc1+knUl/fjnekC6R03s2nFAMuQHKL7+pcv/0aChkGcjQxFjjB5vKgIpEp5wGcCJkeTI7KR8wHCceamlAgLHw==",
+>>>>>>> master
   "success": true,
   "projectFilePath": "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj",
   "expectedPackageFiles": [

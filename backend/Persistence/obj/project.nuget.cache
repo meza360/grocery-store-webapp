@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "bKaM1OVwRsjLGlJRyljgKyAYNDjhLIDQRkihKA6wY2s9xxjj642HAVYGYYC7g9q758QyXivPcpwYeajEZiheiQ==",
+=======
+  "dgSpecHash": "x7XESCaFYyQblpcedi/SNdl1F62/g0U2uDP8NQ3YIRGq0oSuXAmit5rF3PlnDNXQMFPaj5/c9vvtmwwn/xAwnA==",
+>>>>>>> master
   "success": true,
   "projectFilePath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
   "expectedPackageFiles": [
