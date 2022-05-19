@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "gg7syCWzqY/8NFkQ1kiEVcPepXr0ISmhivuqjBS7+aLQ1fN99cDX3aVnsliYXu2krnCqM2FXefieq6JTKibnnA==",
-=======
   "dgSpecHash": "6Ol2AJGkIIYkcNSaouJZZom0dl8X0WLXeQDGghRtjRWr5Rc4eJ3G4rNLJBolWGlzqobPTESfwr/zLt0CMW2Q9Q==",
->>>>>>> master
   "success": true,
   "projectFilePath": "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj",
   "expectedPackageFiles": [
@@ -52,5 +48,12 @@
     "/root/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
     "/root/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /home/gm/Downloads/ventas-online-bd2/backend/Application/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

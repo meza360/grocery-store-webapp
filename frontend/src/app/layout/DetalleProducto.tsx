@@ -36,13 +36,13 @@ function DetalleProducto() {
 						<Container className="col-md-6">
 							<Image
 								className="card-img-top mb-5 mb-md-0"
-								src={`../../assets/svg/${producto.nombre_Producto}.svg`}
+								src={`../../assets/svg/${producto.nombreProducto}.svg`}
 								alt="..."
 							/>
 						</Container>
 						<Container className="col-md-6">
-							<Container className="md mb-1">SKU ID: {producto.sku_Id}</Container>
-							<h1 className="display-5 fw-bolder">{producto.nombre_Producto}</h1>
+							<Container className="md mb-1">SKU ID: {producto.skuId}</Container>
+							<h1 className="display-5 fw-bolder">{producto.nombreProducto}</h1>
 							<Container className="fs-5 mb-5">
 								<span>Q.{producto.precio}</span>
 							</Container>
@@ -57,7 +57,7 @@ function DetalleProducto() {
 								<NavItem
 									as={Link}
 									to="/carritoCompras"
-									onClick={() => agregarCarrito(producto.sku_Id)}
+									onClick={() => agregarCarrito(producto.skuId)}
 									className="btn btn-outline-dark flex-shrink-0"
 								>
 									<i className="bi-cart-fill me-1" />

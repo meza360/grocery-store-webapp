@@ -36,22 +36,22 @@ function ListarProductos() {
 			<div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 			{
 				listadoProductos?.map((producto) =>(
-					<div className="col mb-5" key={producto.sku_Id}>
+					<div className="col mb-5" key={producto.skuId}>
 					<div className="card h-100">
 						
-						<Image className="card-img-top" src={`./assets/svg/${producto.nombre_Producto}.svg`} alt="..." fluid onLoad={()=>{return <ComponentLoader />}}/>
+						<Image className="card-img-top" src={`./assets/svg/${producto.nombreProducto}.svg`} alt="..." fluid onLoad={()=>{return <ComponentLoader />}}/>
 						
 						<div className="card-body p-4">
 							<div className="text-center">
 								
-								<h5 className="fw-bolder">{producto.nombre_Producto}</h5>
+								<h5 className="fw-bolder">{producto.nombreProducto}</h5>
 								
 								Q.{producto.precio}
 							</div>
 						</div>
 						
 						<div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-							<div className="text-center"><NavItem as={Link} to={`/producto/${producto.sku_Id}`} className="btn btn-outline-dark mt-auto" >Ver detalles</NavItem></div>
+							<div className="text-center"><NavItem as={Link} to={`/producto/${producto.skuId}`} className="btn btn-outline-dark mt-auto" >Ver detalles</NavItem></div>
 						</div>
 					</div>
 				</div>

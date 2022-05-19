@@ -28,16 +28,16 @@ function CarritoCompras() {
 											</thead>
 											<tbody>
 												{listadoCarrito.map((producto) => (
-													<tr className="" key={producto.sku_Id}>
+													<tr className="" key={producto.skuId}>
 														<td className="">
 															<div className="product-info">
 																<Image
 																	width="80"
-																	src={`../../assets/svg/${producto.nombre_Producto}.svg`}
+																	src={`../../assets/svg/${producto.nombreProducto}.svg`}
 																	alt="image"
 																/>
-																<NavItem as={Link} to={`/producto/${producto.sku_Id}`}>
-																	{producto.nombre_Producto}
+																<NavItem as={Link} to={`/producto/${producto.skuId}`}>
+																	{producto.nombreProducto}
 																</NavItem>
 															</div>
 														</td>
@@ -55,7 +55,7 @@ function CarritoCompras() {
 														<td className="">
 															<Button
 																className="product-remove"
-																onClick={() => quitarCarrito(producto.sku_Id)}
+																onClick={() => quitarCarrito(producto.skuId)}
 															>
 																Quitar del carrito
 															</Button>

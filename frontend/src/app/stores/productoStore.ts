@@ -71,7 +71,7 @@ export default class ProductoStore {
 			try {
 				producto = await agent.Productos.detalles(id);
 				this.setProducto(producto);
-				this.setProductoSeleccionado(producto.sku_Id);
+				this.setProductoSeleccionado(producto.skuId);
 				this.setCargandoInicial(false);
 			} catch (error) {
 				console.log(error);
@@ -83,11 +83,11 @@ export default class ProductoStore {
 	agregarCarrito = (id: string) => {
 		let producto = this.getProducto(id);
 		this.carrito.push(producto);
-		console.log('Producto agregado al carrito: ' + producto.nombre_Producto);
+		console.log('Producto agregado al carrito: ' + producto.nombreProducto);
 	};
 
 	quitarCarrito = (id: string) => {
-		let prod = this.carrito.findIndex((a) => a.sku_Id === id);
+		let prod = this.carrito.findIndex((a) => a.skuId === id);
 		this.carrito.splice(prod, 1);
 	};
 
@@ -96,7 +96,7 @@ export default class ProductoStore {
 	}
 
 	private setProducto = (producto: Producto) => {
-		this.registroProducto.set(producto.sku_Id, producto);
+		this.registroProducto.set(producto.skuId, producto);
 	};
 
 	private getProducto = (id: string) => {
