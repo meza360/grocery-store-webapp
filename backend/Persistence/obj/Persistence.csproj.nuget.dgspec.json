@@ -10,11 +10,11 @@
         "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
         "projectName": "Domain",
         "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
-        "packagesPath": "/home/gm/.nuget/packages/",
+        "packagesPath": "/root/.nuget/packages/",
         "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gm/.nuget/NuGet/NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.104/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.105/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -72,11 +72,11 @@
         "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
         "projectName": "Persistence",
         "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
-        "packagesPath": "/home/gm/.nuget/packages/",
+        "packagesPath": "/root/.nuget/packages/",
         "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gm/.nuget/NuGet/NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.104/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.105/RuntimeIdentifierGraph.json"
         }
       }
     }

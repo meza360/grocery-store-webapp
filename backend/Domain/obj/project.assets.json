@@ -1296,7 +1296,7 @@
     ]
   },
   "packageFolders": {
-    "/home/gm/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1304,11 +1304,11 @@
       "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
       "projectName": "Domain",
       "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
-      "packagesPath": "/home/gm/.nuget/packages/",
+      "packagesPath": "/root/.nuget/packages/",
       "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/gm/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1356,7 +1356,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.104/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.105/RuntimeIdentifierGraph.json"
       }
     }
   }
