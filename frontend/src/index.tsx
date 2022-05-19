@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import { StoreContext, store } from './app/stores/store';
+import Footer from './app/components/Footer';
 
 ReactDOM.render(
 	<StoreContext.Provider value={store}>

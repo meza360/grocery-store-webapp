@@ -24,10 +24,10 @@ function ListarProductos() {
 
 	return (
         <>
-        <header /*<!-- Header-->*/ className="bg-dark py-5">
-				<Container className="px-4 px-lg-5 my-5">
+        <header /*<!-- Header-->*/ className="bg-dark py-3">
+				<Container className="px-2 px-lg-5 my-2">
 					<div className="text-center text-white">
-						<h1 className="display-4 fw-bolder">Abarroteria UMG</h1>
+						<h1 className="display-2 fw-bolder">Abarroteria UMG</h1>
 						<p className="lead fw-normal text-white-50 mb-0">Lo que necesitas, lo encuentras</p>
 					</div>
 				</Container>

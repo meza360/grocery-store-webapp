@@ -2023,7 +2023,7 @@
     ]
   },
   "packageFolders": {
-    "/home/gm/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2031,11 +2031,11 @@
       "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
       "projectName": "Persistence",
       "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
-      "packagesPath": "/home/gm/.nuget/packages/",
+      "packagesPath": "/root/.nuget/packages/",
       "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/gm/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
