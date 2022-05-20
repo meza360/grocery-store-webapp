@@ -14,7 +14,7 @@ function CarritoPago() {
 								<h4 className="widget-title">Detalles de facturacion</h4>
 								<Form className="checkout-form">
 									<div className="form-group">
-										<FormLabel for="full_name">Nombre completo</FormLabel>
+										<FormLabel htmlFor="full_name">Nombre completo</FormLabel>
 										<FormControl
 											type="text"
 											className="form-control"
@@ -23,7 +23,7 @@ function CarritoPago() {
 										/>
 									</div>
 									<FormGroup className="form-group">
-										<FormLabel for="user_address">Direccion de entrega</FormLabel>
+										<FormLabel htmlFor="user_address">Direccion de entrega</FormLabel>
 										<FormControl
 											type="text"
 											className="form-control"
@@ -33,7 +33,7 @@ function CarritoPago() {
 									</FormGroup>
 									<div className="checkout-country-code clearfix">
 										<FormGroup className="form-group">
-											<FormLabel for="user_post_code">Codigo postal</FormLabel>
+											<FormLabel htmlFor="user_post_code">Codigo postal</FormLabel>
 											<FormControl
 												type="text"
 												className="form-control"
@@ -43,7 +43,7 @@ function CarritoPago() {
 											/>
 										</FormGroup>
 										<FormGroup className="form-group">
-											<FormLabel for="user_city">Municipio</FormLabel>
+											<FormLabel htmlFor="user_city">Municipio</FormLabel>
 											<FormControl
 												type="text"
 												className="form-control"
@@ -54,7 +54,7 @@ function CarritoPago() {
 										</FormGroup>
 									</div>
 									<FormGroup className="form-group">
-										<FormLabel for="user_country">Departamento</FormLabel>
+										<FormLabel htmlFor="user_country">Departamento</FormLabel>
 										<FormControl
 											type="text"
 											className="form-control"
@@ -72,7 +72,7 @@ function CarritoPago() {
 										<div className="card-details">
 											<Form className="checkout-form">
 												<FormGroup className="form-group">
-													<FormLabel for="card-number">
+													<FormLabel htmlFor="card-number">
 														Numeracion de tarjeta <span className="required">*</span>
 													</FormLabel>
 													<FormControl
@@ -83,7 +83,7 @@ function CarritoPago() {
 													/>
 												</FormGroup>
 												<FormGroup className="form-group half-width padding-right">
-													<FormLabel for="card-expiry">
+													<FormLabel htmlFor="card-expiry">
 														Fecha de expiracion (MM/YY) <span className="required">*</span>
 													</FormLabel>
 													<FormControl
@@ -94,7 +94,7 @@ function CarritoPago() {
 													/>
 												</FormGroup>
 												<FormGroup className="form-group half-width padding-left">
-													<FormLabel for="card-cvc">
+													<FormLabel htmlFor="card-cvc">
 														Codigo de seguridad <span className="required">*</span>
 													</FormLabel>
 													<FormControl

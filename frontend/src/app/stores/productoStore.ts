@@ -73,6 +73,7 @@ export default class ProductoStore {
 				this.setProducto(producto);
 				this.setProductoSeleccionado(producto.skuId);
 				this.setCargandoInicial(false);
+				console.log(producto);
 			} catch (error) {
 				console.log(error);
 				this.setCargandoInicial(false);
