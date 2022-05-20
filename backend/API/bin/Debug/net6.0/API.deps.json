@@ -104,6 +104,38 @@
           }
         }
       },
+      "FluentValidation/11.0.1": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.1.0"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/11.0.1": {
+        "dependencies": {
+          "FluentValidation": "11.0.1",
+          "FluentValidation.DependencyInjectionExtensions": "11.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.1.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/11.0.1": {
+        "dependencies": {
+          "FluentValidation": "11.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.1.0"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -685,6 +717,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Domain": "1.0.0",
+          "FluentValidation.AspNetCore": "11.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.EntityFrameworkCore": "6.0.3",
           "Persistence": "1.0.0"
@@ -761,6 +794,27 @@
       "sha512": "sha512-yj1+/4tci7Panu3jKDHYizxwVm0Jvm7b7m057b5h4u8NUHGCR8WIWirBTw+8EptRffwftIWPBeIRGNKD1ewEMQ==",
       "path": "entityframework/6.4.4",
       "hashPath": "entityframework.6.4.4.nupkg.sha512"
+    },
+    "FluentValidation/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fcL5zF/glDwskUtpL0IfBupVWTChxOOvVs+dAA7Gme5NjIeJBiFKWq3eZV1O+AigucnBTr8SWG7wRRn+PgFnTw==",
+      "path": "fluentvalidation/11.0.1",
+      "hashPath": "fluentvalidation.11.0.1.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fF7GiMrRJB1ZDQeSTI3pfAXO8eJDKlWs4rhzx8DIuEQKodgvo5QiMtMEfIbLnkZX2+GmofwDm64LZ8Qw+9zubg==",
+      "path": "fluentvalidation.aspnetcore/11.0.1",
+      "hashPath": "fluentvalidation.aspnetcore.11.0.1.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B+jlYk4L6Ucj1yvpo0R9uelKjtC48CJDDPHF4ct/zBMwkrZoDDvBAqRwuNDChnjsjCr3NgJHyuETh4t2VTGUzQ==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.0.1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.0.1.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
