@@ -45,7 +45,7 @@ namespace Application.Productos
                     _productos = new List<Producto>();
 
                     OracleDataReader rd = _command.ExecuteReader();
-                    Console.WriteLine("Capa aplicacion, metodo ListAll ejecutandose");
+                    Console.WriteLine("Capa aplicacion, metodo ListarTodos ejecutandose");
                         while (rd.Read()){
                             var producto = new Producto();
                             producto.skuId = rd.GetInt16(0);

@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using Oracle.ManagedDataAccess.Client;
 using Domain;
 using Persistence;
 using System.Threading;
-using Oracle.ManagedDataAccess.Client;
 
 namespace Application.Productos
 {
-    public class Detalles
+    public class Categoria
     {
-        
-        public class Query : IRequest<Producto>{
-            public int Id { get; set; }
+        public class Query : IRequest<List<Producto>>{
+            public string Categoria { get; set; }
         }
 
-        public class Handler : IRequestHandler<Query, Producto>
+        public class Handler : IRequestHandler<Query, List<Producto>>
         {
             private readonly DataContext _context;
             private OracleConnection _connection;
@@ -25,7 +24,7 @@ namespace Application.Productos
             private OracleCommand _command;
             
             private string _commandString;
-            public Producto _producto;
+            public List<Producto> _productos;
             public Handler(DataContext context)
             {
             _context = context;
@@ -33,15 +32,15 @@ namespace Application.Productos
             _commandString = "SELECT * FROM UMGPDB1.VISTA_PRODUCTOS_ACTIVOS";
             }
 
-            public async Task<Producto> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<List<Producto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 try
                     {
                     _connection = new OracleConnection(_connectionString);
-                    _commandString += " WHERE SKU_ID = " + request.Id;
+                    _commandString += " WHERE CATEGORIA = " + request.Categoria;
                     await _connection.OpenAsync();
                     Console.WriteLine("Conexion en la capa de aplicacion");
-                    Console.WriteLine("Producto buscado: " + request.Id);
+                    Console.WriteLine("Producto buscado: " + request.Categoria);
                     Console.WriteLine("Sentencia SQL: " + _commandString);
 
                     _command = new OracleCommand(_commandString, _connection);
@@ -51,8 +50,11 @@ namespace Application.Productos
                     
                     Console.WriteLine("Capa aplicacion, metodo detalles ejecutandose");
                         
-                    rd.Read();
-                    _producto = new Producto();
+                    
+                    while (rd.Read())
+                    {
+                    var _producto = new Producto();
+                    _productos = new List<Producto>();
                     _producto.skuId = rd.GetInt16(0);
                     _producto.nombreProducto=rd.GetString(1);
                     _producto.descripcion=rd.GetString(2);
@@ -63,8 +65,11 @@ namespace Application.Productos
                     _producto.fechaCaducidad=rd.GetDateTime(7);
                     _producto.proveedor=rd.GetString(8);
                     _producto.origen=rd.GetString(9);
+                    _productos.Add(_producto);
+                    }
+                    
                         
-                    Console.WriteLine("Producto: " + _producto.nombreProducto);
+                    //Console.WriteLine("Producto: " + _productos);
                     Console.WriteLine("Cerrando la conexion");
                     await _connection.CloseAsync();
                     Console.WriteLine("Conexion cerrada");
@@ -82,10 +87,9 @@ namespace Application.Productos
                         Console.WriteLine("Error en: " + err.Message.ToString());
                         return null;
                     }
-                    return _producto;
+                    return _productos;
                 //return await _context.Producto.FindAsync(request.Id);
             }
         }
-
     }
 }

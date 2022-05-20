@@ -2023,7 +2023,7 @@
     ]
   },
   "packageFolders": {
-    "/root/.nuget/packages/": {}
+    "/home/gm/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2031,11 +2031,11 @@
       "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
       "projectName": "Persistence",
       "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
-      "packagesPath": "/root/.nuget/packages/",
+      "packagesPath": "/home/gm/.nuget/packages/",
       "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/root/.nuget/NuGet/NuGet.Config"
+        "/home/gm/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2096,13 +2096,5 @@
         "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.105/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
