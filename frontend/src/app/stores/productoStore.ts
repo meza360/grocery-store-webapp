@@ -7,7 +7,7 @@ import { generatePdf } from '../tools/generatePdf';
 export default class ProductoStore {
 	productos: Producto[] = [];
 	carrito: Producto[] = [];
-	cart: number | Producto[][];
+	cart: number[] | Producto[];
 	registroProducto = new Map<string, Producto>();
 	productoSeleccionado: Producto | undefined = undefined;
 	editMode = false;
@@ -54,9 +54,11 @@ export default class ProductoStore {
 		try {
 			const productos = await agent.Productos.listar();
 			productos.forEach((producto) => {
-				this.productos.push(producto);
-				this.setProducto(producto);
-				this.registroProducto.set(producto.skuId, producto);
+				runInAction(() => {
+					this.productos.push(producto);
+					this.setProducto(producto);
+					this.registroProducto.set(producto.skuId, producto);
+				});
 			});
 			this.setCargandoInicial(false);
 		} catch (error) {

@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import { observer } from 'mobx-react-lite';
 import React, { ChangeEvent, useState } from 'react';
-import { Image, InputGroup, Form, FormGroup, FormLabel, FormControl, Button, NavItem } from 'react-bootstrap';
+import { Image, InputGroup, Form, FormGroup, FormLabel, FormControl, Button, NavItem,Container } from 'react-bootstrap';
 import { NavLink,Link } from 'react-router-dom';
 import { useStore } from '../stores/store';
 
@@ -13,9 +13,10 @@ function CarritoPago() {
 	const [ nombre, setNombre ] = useState('');
 	const [ direccion, setDireccion ] = useState('');
 	const [ tarjeta, setTarjeta ] = useState('');
+	
 
 	return (
-		<div className="page-wrapper">
+		<Container className="page-wrapper">
 			<div className="checkout shopping">
 				<div className="container">
 					<div className="row">
@@ -40,7 +41,8 @@ function CarritoPago() {
 															id="full_name"
 															placeholder=""
 															name='nombre'
-															value={user.nombresCliente + '' + user.apellidosCliente}
+															value={user.nombresCliente + ' ' + user.apellidosCliente}
+															readOnly
 															
 														/>
 													</div>
@@ -53,6 +55,7 @@ function CarritoPago() {
 															placeholder=""
 															name='direccion'
 															value={user.direccionEntrega}
+															readOnly
 															
 														/>
 													</FormGroup>
@@ -109,6 +112,7 @@ function CarritoPago() {
 																	type="tel"
 																	placeholder="•••• •••• •••• ••••"
 																	value={user.noTarjeta}
+																	readOnly
 																	
 																/>
 															</FormGroup>
@@ -136,14 +140,24 @@ function CarritoPago() {
 																	disabled
 																/>
 															</FormGroup>
-															<NavItem
-																as={NavLink}
-																to="/carritoConfirmacion"
-																className="btn btn-outline-dark mt-20"
+															{totalPedido != 0
+															? <Button 
+															type='button'
+															className="btn btn-outline-dark mt-20"
+															disabled
 															>
-																Colocar orden
-															</NavItem>
-														
+														Carrito vacio
+													</Button>
+																
+															: 	<NavItem
+															as={NavLink}
+															to="/carritoConfirmacion"
+															className="btn btn-outline-dark mt-20"
+														>
+															Colocar orden
+														</NavItem>
+															
+															}
 													</div>
 												</div>
 											</div>
@@ -204,7 +218,8 @@ function CarritoPago() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Container>
+		
 	);
 }
 

@@ -43,7 +43,7 @@ function App() {
 					<Route path="/carritoConfirmacion" element={<CarritoConfirmacion />} />
 					<Route path="/registro" element={<Registro />} />
 					<Route path="/inicioSesion" element={<InicioSesion />} />
-					<Route path="/cuenta" element={<Cuenta />} />
+					<Route path="/cuenta/*" element={<Cuenta />} />
 					<Route path="/cuentaDetalles" element={<CuentaDetalles />} />
 					<Route path="/cuentaOrdenes" element={<CuentaOrdenes />} />
 					<Route path="/cuentaDirecciones" element={<CuentaDirecciones />} />
