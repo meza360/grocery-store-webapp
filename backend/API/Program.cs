@@ -17,6 +17,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
 
 
 
@@ -54,14 +55,14 @@ if (app.Environment.IsDevelopment())
 
 //Routing and binding
 app.UseRouting();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 //Address to bind
 //app.Urls.Add("http://10.0.2.6:5000");
 //app.Urls.Add("http://10.0.2.6:5001");
 
 app.Urls.Add("http://192.168.0.150:5000");
-app.Urls.Add("http://192.168.0.150:5001");
+app.Urls.Add("https://192.168.0.150:5001");
 
 //Cross Object Resource Policy
 app.UseCors("CorsPolicy");

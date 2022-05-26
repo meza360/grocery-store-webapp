@@ -1,9 +1,12 @@
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 import { Button, Image } from 'react-bootstrap';
+import { useStore } from '../stores/store';
 import { generatePdf } from '../tools/generatePdf';
 
 function CarritoConfirmacion() {
+	const { productoStore } = useStore();
+	const { carrito, totalPedido } = productoStore;
 	return (
 		<div>
 			<div className="page-wrapper success-msg">
@@ -18,7 +21,10 @@ function CarritoConfirmacion() {
 								/>
 								<h2 className="text-center">Pago confirmado</h2>
 								<p>Gracias por su compra. Puede consultar los pedidos desde la pagina de su cuenta</p>
-								<Button onClick={() => generatePdf()} className="btn btn-main mt-20">
+								<Button
+									onClick={() => generatePdf(carrito, totalPedido)}
+									className="btn btn-main mt-20"
+								>
 									Continuar comprando
 								</Button>
 							</div>

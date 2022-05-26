@@ -18,6 +18,7 @@ import CuentaTarjetas from './app/layout/CuentaTarjetas';
 import CuentaDetalles from './app/layout/CuentaDetalles';
 import Cuenta from './app/layout/Cuenta';
 import CuentaDirecciones from './app/layout/CuentaDirecciones';
+import InicioEmpleados from './app/layout/InicioEmpleados';
 
 function App() {
 	const [ productos, setProductos ] = useState<Producto[]>();
@@ -47,6 +48,7 @@ function App() {
 					<Route path="/cuentaOrdenes" element={<CuentaOrdenes />} />
 					<Route path="/cuentaDirecciones" element={<CuentaDirecciones />} />
 					<Route path="/cuentaTarjetas" element={<CuentaTarjetas />} />
+					<Route path="/inicioEmpleados" element={<InicioEmpleados />} />
 				</Routes>
 			</Container>
 			<Footer />

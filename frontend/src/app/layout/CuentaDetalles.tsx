@@ -5,15 +5,18 @@ import NavegacionCuenta from '../components/NavegacionCuenta';
 import { Route, Routes } from 'react-router-dom';
 import CuentaOrdenes from './CuentaOrdenes';
 import CuentaTarjetas from './CuentaTarjetas';
+import { useStore } from '../stores/store';
 
 function CuentaDetalles() {
+	const { clienteStore } = useStore();
+	const { user, logSucceded } = clienteStore;
 	return (
 		<section className="user-dashboard page-wrapper">
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
 						<NavegacionCuenta />
-						
+
 						<div className="dashboard-wrapper dashboard-user-profile">
 							<div className="media">
 								<div className="pull-left text-center">
@@ -26,16 +29,20 @@ function CuentaDetalles() {
 								<div className="media-body">
 									<ul className="user-profile-list">
 										<li>
-											<span>Nombre completo:</span>Johanna Doe
+											<span>Nombre completo:</span>
+											{user.nombresCliente + ' ' + user.apellidosCliente}
 										</li>
 										<li>
-											<span>Departamento:</span>USA
+											<span>Nit:</span>
+											{user.nitCliente}
 										</li>
 										<li>
-											<span>Correo electronico:</span>mail@gmail.com
+											<span>Correo electronico:</span>
+											{user.correo}
 										</li>
 										<li>
-											<span>Telefono:</span>+880123123
+											<span>Telefono:</span>
+											{user.telefono}
 										</li>
 									</ul>
 								</div>

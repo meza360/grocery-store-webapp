@@ -1,8 +1,12 @@
 import React from 'react';
+import { observer } from 'mobx-react-lite';
 import { Form, FormControl, FormGroup, FormLabel, Row, Col, Button } from 'react-bootstrap';
 import NavegacionCuenta from '../components/NavegacionCuenta';
+import { useStore } from '../stores/store';
 
-function cuentaDirecciones() {
+function CuentaDirecciones() {
+	const { clienteStore } = useStore();
+	const { user } = clienteStore;
 	return (
 		<section className="user-dashboard page-wrapper">
 			<div className="container">
@@ -12,17 +16,19 @@ function cuentaDirecciones() {
 						<div className="container user-dashboard page-wrapper col-md-12">
 							<Form>
 								<FormGroup className="form-group">
-									<FormLabel for="user_address">Direccion de entrega</FormLabel>
+									<FormLabel htmlFor="user_address">Direccion de entrega</FormLabel>
 									<FormControl
 										type="text"
 										className="form-control"
-										id="user_address"
-										placeholder=""
+										id="direccionEntrega"
+										name="direccionEntrega"
+										placeholder={user.direccionEntrega}
 										disabled
+										value={user.direccionEntrega}
 									/>
 								</FormGroup>
 
-								<FormGroup className="form-group">
+								{/* <FormGroup className="form-group">
 									<FormLabel for="user_post_code">Codigo postal</FormLabel>
 									<FormControl
 										type="text"
@@ -59,7 +65,7 @@ function cuentaDirecciones() {
 											/>
 										</FormGroup>
 									</Col>
-								</Row>
+								</Row> */}
 								<FormGroup className="form-group">
 									<Button className="btn-outline-light" variant="info">
 										Editar
@@ -77,4 +83,4 @@ function cuentaDirecciones() {
 	);
 }
 
-export default cuentaDirecciones;
+export default observer(CuentaDirecciones);

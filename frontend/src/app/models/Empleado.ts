@@ -1,3 +1,9 @@
 export interface Empleado {
-	id: string;
+	idUsuario: string;
+	nivelAcceso: string;
+	nombres: string;
+	apellidos: string;
+	correo: string;
+	password: string;
+	empleador: string;
 }

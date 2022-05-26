@@ -11808,3 +11808,18 @@ fieldset:disabled .btn {
 	min-height: 100vh;
 	height: 100vh;
 }
+
+.payment {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.card-details {
+	height: fit-content;
+	width: 100%;
+}
+
+.card-image {
+	height: fit-content;
+	width: 100%;
+}

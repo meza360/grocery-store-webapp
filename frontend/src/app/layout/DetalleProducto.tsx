@@ -40,36 +40,37 @@ function DetalleProducto() {
 								alt="..."
 							/>
 						</Container>
-						<Container className="col-md-6">
+						<Container className="col-md-6 text-center">
 							<Container className="md mb-1">SKU ID: {producto.skuId}</Container>
 							<h1 className="display-5 fw-bolder">{producto.nombreProducto}</h1>
+							<h2 className="display-5 fw-bolder">Marca: {producto.proveedor}</h2>
 							<Container className="fs-5 mb-5">
-								<span>Q.{producto.precio}</span>
+								<span>Precio: Q.{producto.precio}</span>
 							</Container>
 							<p className="lead">{producto.descripcion}</p>
-							<Container className="d-flex">
-								<Input
+							{/* <Container className="d-flex"> */}
+							{/* <Input
 									className="form-control text-center me-3"
 									id="inputQuantity"
 									type="number"
 									value="1"
-								/>
-								<NavItem
-									as={Link}
-									to="/carritoCompras"
-									onClick={() => agregarCarrito(producto.skuId)}
-									className="btn btn-outline-dark flex-shrink-0"
-								>
-									<i className="bi-cart-fill me-1" />
-									Agregar al carrito
-								</NavItem>
-							</Container>
+								/> */}
+							<NavItem
+								as={Link}
+								to="/carritoCompras"
+								onClick={() => agregarCarrito(producto.skuId)}
+								className="btn btn-outline-light btn-primary flex-shrink-0"
+							>
+								<i className="bi-cart-fill me-1" />
+								Agregar al carrito
+							</NavItem>
+							{/* </Container> */}
 						</Container>
 					</Container>
 				</Container>
 			</Container>
 
-			<Container className="py-5 bg-light">
+			{/* <Container className="py-5 bg-light">
 				<Container className="container">
 					<h2 className="fw-bolder mb-4">Productos relacionados</h2>
 					<Container className="row row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -165,7 +166,7 @@ function DetalleProducto() {
 						</Container>
 					</Container>
 				</Container>
-			</Container>
+			</Container> */}
 		</Fragment>
 	);
 }

@@ -1,5 +1,8 @@
 import jsPDFInvoiceTemplate, { OutputType } from 'jspdf-invoice-template';
 
+let productos = [];
+let total = 0;
+
 var props = {
 	outputType: OutputType.DataUrlNewWindow,
 	returnJsPDFDocObject: true,
@@ -32,8 +35,8 @@ var props = {
 	invoice: {
 		label: 'Factura #: ',
 		num: 19,
-		invDate: 'Fecha de pago: 01/01/2021 18:12',
-		invGenDate: 'Fecha de emision: 02/02/2021 10:17',
+		invDate: 'Fecha de pago:' + new Date().getFullYear() + new Date().getTime(),
+		invGenDate: 'Fecha de emision:' + new Date().getFullYear() + new Date().getTime(),
 		headerBorder: false,
 		tableBodyBorder: false,
 		header: [
@@ -60,7 +63,7 @@ var props = {
 			{ title: 'Unidad' },
 			{ title: 'Total' }
 		],
-		table: Array.from(Array(10), (item, index) => [
+		table: Array.from(productos, (item, index) => [
 			index + 1,
 			'There are many variations ',
 			'Lorem Ipsum is simply dummy text dummy text ',
@@ -70,7 +73,7 @@ var props = {
 			400.5
 		]),
 		invTotalLabel: 'Total factura:',
-		invTotal: '145,250.50',
+		invTotal: 'Q.' + total,
 		invCurrency: 'Todo',
 		row1: {
 			col1: 'IVA:',
@@ -82,15 +85,14 @@ var props = {
 		},
 		row2: {
 			col1: 'SubTotal:',
-			col2: '116,199.90',
+			col2: total,
 			col3: 'Todo',
 			style: {
 				fontSize: 10 //optional, default 12
 			}
 		},
 		invDescLabel: 'Nota:',
-		invDesc:
-			"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+		invDesc: 'Esta factura constituye un comprobante de pago, no se aceptan cambios ni devoluciones'
 	},
 	footer: {
 		text: 'The invoice is created on a computer and is valid without the signature and stamp.'
@@ -99,6 +101,10 @@ var props = {
 	pageLabel: 'Page '
 };
 
-export function generatePdf() {
+export function generatePdf(prod, tot) {
+	productos = prod;
+	total = tot;
+	console.log('productos' + prod);
+	console.log('total' + total);
 	const pdfObject = jsPDFInvoiceTemplate(props);
 }

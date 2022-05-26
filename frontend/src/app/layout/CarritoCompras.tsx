@@ -5,8 +5,24 @@ import { NavLink, Link } from 'react-router-dom';
 import { useStore } from '../../app/stores/store';
 
 function CarritoCompras() {
-	const { productoStore } = useStore();
+	const { productoStore, clienteStore } = useStore();
 	const { listadoCarrito, quitarCarrito } = productoStore;
+	const { logSucceded } = clienteStore;
+
+	let boton;
+	if (logSucceded) {
+		boton = (
+			<NavItem as={NavLink} to="/carritoPago" className="btn btn-outline-dark pull-right">
+				Proceder a pago
+			</NavItem>
+		);
+	} else {
+		boton = (
+			<NavItem as={NavLink} to="/inicioSesion" className="btn btn-outline-dark pull-right">
+				Proceder a pago
+			</NavItem>
+		);
+	}
 
 	return (
 		<div className="page-wrapper">
@@ -64,13 +80,7 @@ function CarritoCompras() {
 												))}
 											</tbody>
 										</table>
-										<NavItem
-											as={NavLink}
-											to="/carritoPago"
-											className="btn btn-outline-dark pull-right"
-										>
-											Proceder a pago
-										</NavItem>
+										{boton}
 									</form>
 								</div>
 							</div>

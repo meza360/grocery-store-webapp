@@ -1,15 +1,19 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import agent from '../api/agent';
+import { Orden } from '../models/Compra';
 import { Producto } from '../models/Producto';
+import { generatePdf } from '../tools/generatePdf';
 
 export default class ProductoStore {
 	productos: Producto[] = [];
 	carrito: Producto[] = [];
+	cart: number | Producto[][];
 	registroProducto = new Map<string, Producto>();
 	productoSeleccionado: Producto | undefined = undefined;
 	editMode = false;
 	cargando = false;
 	cargandoInicial = false;
+	totalPedido: number;
 
 	constructor() {
 		makeAutoObservable(this);
@@ -50,9 +54,9 @@ export default class ProductoStore {
 		try {
 			const productos = await agent.Productos.listar();
 			productos.forEach((producto) => {
-				//this.productos.push(producto);
+				this.productos.push(producto);
 				this.setProducto(producto);
-				//this.registroProducto.set(producto.sku_Id,producto);
+				this.registroProducto.set(producto.skuId, producto);
 			});
 			this.setCargandoInicial(false);
 		} catch (error) {
@@ -83,17 +87,36 @@ export default class ProductoStore {
 
 	agregarCarrito = (id: string) => {
 		let producto = this.getProducto(id);
-		this.carrito.push(producto);
+
+		let existe = this.carrito.find((x) => x.skuId === producto.skuId);
+		if (existe) {
+			console.log('Producto ya esta en carretilla');
+		} else {
+			this.carrito.push(producto);
+			this.totalCarrito();
+		}
+
+		//this.cart.push(1, producto);
 		console.log('Producto agregado al carrito: ' + producto.nombreProducto);
 	};
+
+	totalCarrito() {
+		this.totalPedido = 0;
+		this.carrito.forEach((prod) => {
+			this.totalPedido += prod.precio;
+		});
+		//return this.totalPedido;
+	}
 
 	quitarCarrito = (id: string) => {
 		let prod = this.carrito.findIndex((a) => a.skuId === id);
 		this.carrito.splice(prod, 1);
+		this.totalCarrito();
 	};
 
 	get listadoCarrito() {
 		return this.carrito;
+		//return this.cart;
 	}
 
 	private setProducto = (producto: Producto) => {
@@ -107,4 +130,10 @@ export default class ProductoStore {
 	get listadoProductos() {
 		return Array.from(this.registroProducto.values());
 	}
+
+	compra = async (datos: Orden) => {
+		console.log(this.carrito);
+		console.log(this.totalPedido);
+		generatePdf(this.carrito, this.totalPedido);
+	};
 }

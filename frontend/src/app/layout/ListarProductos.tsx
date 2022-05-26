@@ -9,7 +9,7 @@ import ComponentLoader from '../components/ComponentLoader';
 function ListarProductos() {
 	//const {target,setTarget} = useState('');
 	const { productoStore } = useStore();
-	const { productoSeleccionado, editMode,listadoProductos } = productoStore;
+	const { productoSeleccionado, editMode,listadoProductos,registroProducto } = productoStore;
 
 	useEffect(
 		() => {

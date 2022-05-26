@@ -233,3 +233,8 @@ D:/Users/giova/Desktop/ventas-online-bd2/backend/API/obj/Debug/net6.0/ref/API.dl
 /home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/FluentValidation.dll
 /home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
 /home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
+/home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll

@@ -15,7 +15,6 @@ namespace API.Controllers
     [Route("/api/[controller]")]
     public class BaseController : ControllerBase
     {
-        private readonly ILogger<BaseController> _logger;
 
         private IMediator _mediator;
         protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
