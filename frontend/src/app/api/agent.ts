@@ -1,8 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
 import { Producto } from '../models/Producto';
 import { Proveedor } from '../models/Proveedor';
-import { Cliente } from '../models/Cliente';
+import { Cliente, FormCliente, RegistroCliente } from '../models/Cliente';
 import { Empleado } from '../models/Empleado';
+import { request } from 'http';
 
 const sleep = (delay: number) => {
 	return new Promise((resolve) => {
@@ -48,6 +49,9 @@ const Proveedores = {
 };
 
 const Clientes = {
+	current: () => requests.get<Cliente>('/Account'),
+	login: (user: FormCliente) => requests.post<Cliente>('/Account/login', user),
+	register: (user: RegistroCliente) => requests.post<Cliente>('/Account/register', user),
 	listar: () => requests.get<Cliente[]>('/cliente'),
 	detalles: (id: string) => requests.get<Cliente>(`/cliente/${id}`),
 	crear: (cliente: Cliente) => requests.post<void>('/cliente', cliente),

@@ -1,11 +1,30 @@
 import React from 'react';
+import { observer } from 'mobx-react-lite';
 import { Badge, Button, Container, Form, Navbar, NavItem, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import { useStore } from '../stores/store';
 
 function NavigationBar() {
-	const { productoStore } = useStore();
+	const { productoStore, clienteStore } = useStore();
 	const { listadoCarrito } = productoStore;
+	const { logSucceded, user } = clienteStore;
+
+	let cuenta;
+	if (logSucceded) {
+		cuenta = (
+			<NavItem className="btn" type="submit" as={NavLink} to="/cuenta">
+				<Image src="./assets/icons/cuenta.svg" height={'50'} />
+				{user.nombresCliente}
+			</NavItem>
+		);
+	} else {
+		cuenta = (
+			<NavItem className="btn" type="submit" as={NavLink} to="/inicioSesion">
+				<Image src="./assets/icons/cuenta.svg" height={'50'} />
+				Mi Cuenta
+			</NavItem>
+		);
+	}
 	return (
 		<Container>
 			<Navbar className="navbar navbar-expand-lg navbar-light bg-light">
@@ -49,21 +68,18 @@ function NavigationBar() {
 							</NavDropdown>
 						</ul>
 						<Form className="d-flex">
-							<NavItem className="btn" type="submit" as={NavLink} to="/inicioSesion">
-								<Image src="./assets/icons/cuenta.svg" height={'50'} />
-								Mi Cuenta
-							</NavItem>
+							{cuenta}
 
-							<NavItem className="btn" type="submit" as={NavLink} to="/carritoCompras">
+							<NavItem className="btn" as={NavLink} to="/carritoCompras">
 								<i className="bi-cart-fill me-1" />
 								<Image src="./assets/icons/bolso.svg" height={'50'} />
 								Carrito de compras
 								<Badge className="bg-dark text-white ms-1 rounded-pill">{listadoCarrito.length}</Badge>
 							</NavItem>
-							<Button className="btn" variant="outline-dark" type="submit">
+							<NavItem className="btn" as={NavLink} to="inicioEmpleados">
 								<Image src="./assets/icons/administrativo.svg" height={'50'} />
 								Administrativos
-							</Button>
+							</NavItem>
 						</Form>
 					</Container>
 				</Container>
@@ -71,4 +87,4 @@ function NavigationBar() {
 		</Container>
 	);
 }
-export default NavigationBar;
+export default observer(NavigationBar);

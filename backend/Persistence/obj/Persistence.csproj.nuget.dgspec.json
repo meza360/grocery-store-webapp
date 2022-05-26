@@ -10,11 +10,11 @@
         "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
         "projectName": "Domain",
         "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
-        "packagesPath": "/root/.nuget/packages/",
+        "packagesPath": "/home/gm/.nuget/packages/",
         "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/home/gm/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -38,13 +38,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.21.5, )"
+              "version": "[6.21.61, )"
             }
           },
           "imports": [
@@ -72,11 +76,11 @@
         "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
         "projectName": "Persistence",
         "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
-        "packagesPath": "/root/.nuget/packages/",
+        "packagesPath": "/home/gm/.nuget/packages/",
         "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/home/gm/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -104,11 +108,15 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.NETCore.App": {
               "target": "Package",
@@ -116,7 +124,7 @@
             },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.21.5, )"
+              "version": "[6.21.61, )"
             }
           },
           "imports": [

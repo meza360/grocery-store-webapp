@@ -18,6 +18,9 @@ namespace API.Extensions
             services.AddCors(opt => {
                 opt.AddPolicy("CorsPolicy", policy =>{
                     policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    policy.WithOrigins("http://192.168.0.150:3000");
+                    policy.WithOrigins("http://oddbbsrv01:3000");
+                    policy.WithOrigins("http://localhost:3000");
                     /*
                     .WithOrigins("http://localhost:3000",
                     "http://localhost:19000",
