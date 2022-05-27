@@ -4,9 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { StoreContext, store } from './app/stores/store';
-import Footer from './app/components/Footer';
 import { createBrowserHistory } from 'history';
 
 export const history = createBrowserHistory();

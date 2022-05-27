@@ -1,14 +1,13 @@
 import { Formik, Form, Field } from 'formik';
 import { observer } from 'mobx-react-lite';
-import { stringify } from 'querystring';
 import React from 'react';
-import { FormGroup, FormLabel, Image, Button, NavItem } from 'react-bootstrap';
+import { Image, Button, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useStore } from '../stores/store';
 
 function Registro() {
 	const { clienteStore } = useStore();
-	const { signUp, logSucceded, signSucceded } = clienteStore;
+	const { signUp, signSucceded } = clienteStore;
 	let boton;
 	if (signSucceded) {
 		boton = (

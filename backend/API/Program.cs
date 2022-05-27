@@ -57,15 +57,15 @@ if (app.Environment.IsDevelopment())
 
 //Routing and binding
 app.UseRouting();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 //app.UseAuthentication();
 
 //Address to bind
-//app.Urls.Add("http://10.0.2.6:5000");
-//app.Urls.Add("https://10.0.2.6:5001");
+app.Urls.Add("http://10.0.2.6:5000");
+app.Urls.Add("https://10.0.2.6:5001");
 
-app.Urls.Add("http://127.0.0.1:5000");
-app.Urls.Add("https://127.0.0.1:5001");
+//app.Urls.Add("http://127.0.0.1:5000");
+//app.Urls.Add("https://127.0.0.1:5001");
 //app.Urls.Add("https://127.0.0.1:5001");
 
 //app.Urls.Add("https://localhost:5001");
@@ -80,10 +80,8 @@ app.Urls.Add("https://127.0.0.1:5001");
 //Cross Object Resource Policy
 app.UseCors("CorsPolicy");
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
-
-
 
 app.Run();

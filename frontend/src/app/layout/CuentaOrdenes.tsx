@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { Button, Image } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import NavegacionCuenta from '../components/NavegacionCuenta';
 
 function CuentaOrdenes() {

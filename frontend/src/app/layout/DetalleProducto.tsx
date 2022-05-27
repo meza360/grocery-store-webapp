@@ -1,22 +1,13 @@
 import React, { Fragment, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { Input } from 'semantic-ui-react';
-import { Button, Container, Image, NavItem } from 'react-bootstrap';
+import { Container, Image, NavItem } from 'react-bootstrap';
 import { useStore } from '../../app/stores/store';
-import { Producto } from '../../app/models/Producto';
 import PageLoader from '../components/PageLoader';
 import { useParams, Link } from 'react-router-dom';
 
 function DetalleProducto() {
 	const { productoStore } = useStore();
-	const {
-		productoSeleccionado: producto,
-		editMode,
-		cancelProductoSeleccionado,
-		cargarProducto,
-		cargandoInicial,
-		agregarCarrito
-	} = productoStore;
+	const { productoSeleccionado: producto, cargarProducto, agregarCarrito } = productoStore;
 	const { id } = useParams<{ id: string }>();
 
 	useEffect(

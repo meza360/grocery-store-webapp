@@ -145,3 +145,4 @@
 /home/umgdeveloper/ventas-online-bd2/backend/API/obj/Release/net6.0/linux-x64/ref/API.dll
 /home/umgdeveloper/ventas-online-bd2/backend/API/obj/Release/net6.0/linux-x64/API.pdb
 /home/umgdeveloper/ventas-online-bd2/backend/API/obj/Release/net6.0/linux-x64/API.genruntimeconfig.cache
+/home/umgdeveloper/ventas-online-bd2/backend/API/bin/Release/net6.0/linux-x64/Microsoft.AspNetCore.Authentication.Certificate.dll

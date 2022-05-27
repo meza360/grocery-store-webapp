@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { Button, Image } from 'react-bootstrap';
+import {  Image } from 'react-bootstrap';
 import NavegacionCuenta from '../components/NavegacionCuenta';
-import { Route, Routes } from 'react-router-dom';
-import CuentaOrdenes from './CuentaOrdenes';
-import CuentaTarjetas from './CuentaTarjetas';
+
 import { useStore } from '../stores/store';
 
 function CuentaDetalles() {

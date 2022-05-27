@@ -18,6 +18,7 @@
 /home/umgdeveloper/ventas-online-bd2/backend/api/MediatR.dll
 /home/umgdeveloper/ventas-online-bd2/backend/api/MediatR.Contracts.dll
 /home/umgdeveloper/ventas-online-bd2/backend/api/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/home/umgdeveloper/ventas-online-bd2/backend/api/Microsoft.AspNetCore.Authentication.Certificate.dll
 /home/umgdeveloper/ventas-online-bd2/backend/api/Microsoft.AspNetCore.Cryptography.Internal.dll
 /home/umgdeveloper/ventas-online-bd2/backend/api/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 /home/umgdeveloper/ventas-online-bd2/backend/api/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

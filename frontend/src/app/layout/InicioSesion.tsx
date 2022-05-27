@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { FormGroup, FormControl, FormLabel, Image, Button, NavItem } from 'react-bootstrap';
+import { FormGroup, Image, Button, NavItem } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import { useStore } from '../stores/store';

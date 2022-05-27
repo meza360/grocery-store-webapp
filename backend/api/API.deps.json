@@ -13,6 +13,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Devart.Data.Oracle.EF6": "9.16.1434",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
+          "Microsoft.AspNetCore.Authentication.Certificate": "6.0.5",
           "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
           "Oracle.EntityFrameworkCore": "6.21.61",
@@ -165,6 +166,17 @@
           "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.1.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Certificate/6.0.5": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "6.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "6.0.5.0",
+            "fileVersion": "6.0.522.21802"
           }
         }
       },
@@ -838,6 +850,13 @@
       "sha512": "sha512-mYdfMvpkahCAj4tRfBoeMlUBZa2WthaONdQ4y5TtIyxcZYb5e7AE7c1eITTZVWcQhguxvD8AdExdaiAW6RhrVA==",
       "path": "mediatr.extensions.microsoft.dependencyinjection/10.0.1",
       "hashPath": "mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/6.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g8d0NoPLH86eQZv1jH0e13b+v/i675r6O4AnTvpwwqdyOnhd9PWeK9Vm+SvprMMI8BX/jMN5+J3TAQH2La5p6w==",
+      "path": "microsoft.aspnetcore.authentication.certificate/6.0.5",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.6.0.5.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.5": {
       "type": "package",

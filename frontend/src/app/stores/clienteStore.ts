@@ -1,7 +1,6 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import { Cliente, FormCliente, RegistroCliente } from '../models/Cliente';
 import agent from '../api/agent';
-import { history } from '../../index';
 
 export default class ClienteStore {
 	user: Cliente | null;

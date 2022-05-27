@@ -1,15 +1,15 @@
 import { observer } from 'mobx-react-lite';
-import React, { Fragment, useEffect, useState } from 'react';
-import { Button, Container,Image, NavItem } from 'react-bootstrap';
+import React, { useEffect } from 'react';
+import { Container,Image, NavItem } from 'react-bootstrap';
 import { useStore } from '../stores/store';
-import {NavLink, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import PageLoader from '../components/PageLoader';
 import ComponentLoader from '../components/ComponentLoader';
 
 function ListarProductos() {
 	//const {target,setTarget} = useState('');
 	const { productoStore } = useStore();
-	const { productoSeleccionado, editMode,listadoProductos,registroProducto } = productoStore;
+	const { listadoProductos } = productoStore;
 
 	useEffect(
 		() => {

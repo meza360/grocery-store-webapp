@@ -14,7 +14,7 @@ const sleep = (delay: number) => {
 //axios.defaults.baseURL = 'http://192.168.0.150:5000/api';
 //axios.defaults.baseURL = 'http://10.0.2.6:5000/api';
 //axios.defaults.baseURL = 'https://20.228.215.6:5001/api';
-axios.defaults.baseURL = 'https://127.0.0.1:5001/api';
+axios.defaults.baseURL = 'http://20.228.215.6:5000/api';
 //axios.defaults.baseURL = 'https://127.0.0.1:5001/api';
 //axios.defaults.baseURL = 'https://127.0.0.1:5001/api';
 

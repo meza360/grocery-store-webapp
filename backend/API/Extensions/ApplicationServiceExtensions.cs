@@ -26,6 +26,8 @@ namespace API.Extensions
                     policy.WithOrigins("http://20.228.215.6:3000");
                     policy.WithOrigins("https://20.228.215.6:3000");
                     policy.WithOrigins("https://127.0.0.1:3000");
+                    policy.WithOrigins("http://20.228.215.6");
+                    policy.WithOrigins("https://20.228.215.6");
                     /*
                     .WithOrigins("http://localhost:3000",
                     "http://localhost:19000",

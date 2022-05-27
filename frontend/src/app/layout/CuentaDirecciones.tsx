@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { Form, FormControl, FormGroup, FormLabel, Row, Col, Button } from 'react-bootstrap';
+import { Form, FormControl, FormGroup, FormLabel, Button } from 'react-bootstrap';
 import NavegacionCuenta from '../components/NavegacionCuenta';
 import { useStore } from '../stores/store';
 
