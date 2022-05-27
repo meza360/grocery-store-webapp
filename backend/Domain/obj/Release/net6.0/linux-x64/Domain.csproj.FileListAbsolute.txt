@@ -9,3 +9,15 @@
 /home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.dll
 /home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/ref/Domain.dll
 /home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.pdb
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/bin/Release/net6.0/linux-x64/Domain.deps.json
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/bin/Release/net6.0/linux-x64/Domain.dll
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/bin/Release/net6.0/linux-x64/ref/Domain.dll
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/bin/Release/net6.0/linux-x64/Domain.pdb
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.csproj.AssemblyReference.cache
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.AssemblyInfoInputs.cache
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.AssemblyInfo.cs
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.csproj.CoreCompileInputs.cache
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.dll
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/ref/Domain.dll
+/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/Release/net6.0/linux-x64/Domain.pdb

@@ -24,8 +24,8 @@ function App() {
 	const [ productos, setProductos ] = useState<Producto[]>();
 
 	useEffect(() => {
-		axios.get<Producto[]>('http://192.168.0.150:5000/api/producto').then((response) => {
-			//axios.get<Producto[]>('http://10.0.2.6:5000/api/producto').then((response) => {
+		//axios.get<Producto[]>('http://192.168.0.150:5000/api/producto').then((response) => {
+			axios.get<Producto[]>('https://127.0.0.1:5001/api/producto').then((response) => {
 			console.log(response.data);
 			setProductos(response.data);
 		});

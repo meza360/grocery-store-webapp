@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using Domain;
 using Application.Productos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace API.Controllers
 {
     public class ProductoController : BaseController
     {
         //Listado de productos
+        [EnableCors("CorsPolicy")]
         [HttpGet]
         public async Task<ActionResult<List<Producto>>> GetProductos()
         {

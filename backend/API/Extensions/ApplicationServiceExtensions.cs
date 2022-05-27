@@ -20,8 +20,12 @@ namespace API.Extensions
                     policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     policy.WithOrigins("http://192.168.0.150:3000");
                     policy.WithOrigins("http://10.0.2.6:3000");
+                    policy.WithOrigins("https://10.0.2.6:3000");
                     policy.WithOrigins("http://oddbbsrv01:3000");
                     policy.WithOrigins("http://localhost:3000");
+                    policy.WithOrigins("http://20.228.215.6:3000");
+                    policy.WithOrigins("https://20.228.215.6:3000");
+                    policy.WithOrigins("https://127.0.0.1:3000");
                     /*
                     .WithOrigins("http://localhost:3000",
                     "http://localhost:19000",
@@ -36,8 +40,8 @@ namespace API.Extensions
             });
 
             services.AddDbContext<DataContext>(opt =>{
-                     opt.UseOracle(config.GetConnectionString("DevConnection"));
-                     //opt.UseOracle(config.GetConnectionString("Rac1Connection"));
+                     //opt.UseOracle(config.GetConnectionString("DevConnection"));
+                     opt.UseOracle(config.GetConnectionString("Rac1Connection"));
                      
             });
             

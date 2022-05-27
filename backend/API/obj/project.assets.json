@@ -172,6 +172,21 @@
           "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Certificate/6.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.5": {
         "type": "package",
         "compile": {
@@ -1528,6 +1543,21 @@
         "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll",
         "mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
         "mediatr.extensions.microsoft.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/6.0.5": {
+      "sha512": "g8d0NoPLH86eQZv1jH0e13b+v/i675r6O4AnTvpwwqdyOnhd9PWeK9Vm+SvprMMI8BX/jMN5+J3TAQH2La5p6w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.certificate/6.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.Certificate.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.Certificate.xml",
+        "microsoft.aspnetcore.authentication.certificate.6.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.certificate.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.5": {
@@ -3984,6 +4014,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "Devart.Data.Oracle.EF6 >= 9.16.1434",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.1",
+      "Microsoft.AspNetCore.Authentication.Certificate >= 6.0.5",
       "Microsoft.EntityFrameworkCore >= 6.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.5",
       "Oracle.EntityFrameworkCore >= 6.21.61",
@@ -3992,19 +4023,19 @@
     ]
   },
   "packageFolders": {
-    "/home/gm/.nuget/packages/": {}
+    "/home/umgdeveloper/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj",
+      "projectUniqueName": "/home/umgdeveloper/ventas-online-bd2/backend/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/API/API.csproj",
-      "packagesPath": "/home/gm/.nuget/packages/",
-      "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/API/obj/",
+      "projectPath": "/home/umgdeveloper/ventas-online-bd2/backend/API/API.csproj",
+      "packagesPath": "/home/umgdeveloper/.nuget/packages/",
+      "outputPath": "/home/umgdeveloper/ventas-online-bd2/backend/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/gm/.nuget/NuGet/NuGet.Config"
+        "/home/umgdeveloper/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -4016,11 +4047,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj": {
-              "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Application/Application.csproj"
+            "/home/umgdeveloper/ventas-online-bd2/backend/Application/Application.csproj": {
+              "projectPath": "/home/umgdeveloper/ventas-online-bd2/backend/Application/Application.csproj"
             },
-            "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj": {
-              "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj"
+            "/home/umgdeveloper/ventas-online-bd2/backend/Persistence/Persistence.csproj": {
+              "projectPath": "/home/umgdeveloper/ventas-online-bd2/backend/Persistence/Persistence.csproj"
             }
           }
         }
@@ -4046,6 +4077,10 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[10.0.1, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Certificate": {
+            "target": "Package",
+            "version": "[6.0.5, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

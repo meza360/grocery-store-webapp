@@ -23,7 +23,8 @@ namespace API.Controllers
         public AccountController(SignInManager<Cliente> signInManager)
         {
             _signInManager = signInManager;
-            _connectionString = "User Id=GMEZAP;Password=developer;Data Source=//192.168.0.150:1521/stigtpdb2";
+            //_connectionString = "User Id=GMEZAP;Password=developer;Data Source=//192.168.0.150:1521/stigtpdb2";
+            _connectionString = "User Id=UMGPDB1;Password=UMGPDB1;Data Source=//10.0.2.4:1521/umgpdb1.umg";
             _connection = new OracleConnection(_connectionString);
             
         }

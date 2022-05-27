@@ -1450,19 +1450,19 @@
     ]
   },
   "packageFolders": {
-    "/home/gm/.nuget/packages/": {}
+    "/home/umgdeveloper/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
+      "projectUniqueName": "/home/umgdeveloper/ventas-online-bd2/backend/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj",
-      "packagesPath": "/home/gm/.nuget/packages/",
-      "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/obj/",
+      "projectPath": "/home/umgdeveloper/ventas-online-bd2/backend/Domain/Domain.csproj",
+      "packagesPath": "/home/umgdeveloper/.nuget/packages/",
+      "outputPath": "/home/umgdeveloper/ventas-online-bd2/backend/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/gm/.nuget/NuGet/NuGet.Config"
+        "/home/umgdeveloper/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

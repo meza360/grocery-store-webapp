@@ -2178,19 +2178,19 @@
     ]
   },
   "packageFolders": {
-    "/home/gm/.nuget/packages/": {}
+    "/home/umgdeveloper/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
+      "projectUniqueName": "/home/umgdeveloper/ventas-online-bd2/backend/Persistence/Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/Persistence.csproj",
-      "packagesPath": "/home/gm/.nuget/packages/",
-      "outputPath": "/home/gm/Downloads/ventas-online-bd2/backend/Persistence/obj/",
+      "projectPath": "/home/umgdeveloper/ventas-online-bd2/backend/Persistence/Persistence.csproj",
+      "packagesPath": "/home/umgdeveloper/.nuget/packages/",
+      "outputPath": "/home/umgdeveloper/ventas-online-bd2/backend/Persistence/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/gm/.nuget/NuGet/NuGet.Config"
+        "/home/umgdeveloper/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2202,8 +2202,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj": {
-              "projectPath": "/home/gm/Downloads/ventas-online-bd2/backend/Domain/Domain.csproj"
+            "/home/umgdeveloper/ventas-online-bd2/backend/Domain/Domain.csproj": {
+              "projectPath": "/home/umgdeveloper/ventas-online-bd2/backend/Domain/Domain.csproj"
             }
           }
         }
