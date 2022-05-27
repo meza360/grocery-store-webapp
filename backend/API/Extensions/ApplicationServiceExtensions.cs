@@ -28,15 +28,7 @@ namespace API.Extensions
                     policy.WithOrigins("https://127.0.0.1:3000");
                     policy.WithOrigins("http://20.228.215.6");
                     policy.WithOrigins("https://20.228.215.6");
-                    /*
-                    .WithOrigins("http://localhost:3000",
-                    "http://localhost:19000",
-                    "http://192.168.0.60:3000",
-                    "http://192.168.0.55:19000",
-                    "exp://192.168.0.55:19000",
-                    "exp://192.168.0.60:19000",
-                    "http://localhost:8100");
-                    */
+                    policy.WithOrigins("http://umg-appsite.eastus.cloudapp.azure.com");
                 });
                
             });

@@ -18,6 +18,7 @@
 /api/MediatR.dll
 /api/MediatR.Contracts.dll
 /api/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/api/Microsoft.AspNetCore.Authentication.Certificate.dll
 /api/Microsoft.AspNetCore.Cryptography.Internal.dll
 /api/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 /api/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
