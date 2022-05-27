@@ -59,7 +59,7 @@ app.UseRouting();
 
 //Address to bind
 //app.Urls.Add("http://10.0.2.6:5000");
-//app.Urls.Add("http://10.0.2.6:5001");
+//app.Urls.Add("https://10.0.2.6:5001");
 
 app.Urls.Add("http://192.168.0.150:5000");
 app.Urls.Add("https://192.168.0.150:5001");

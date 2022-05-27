@@ -11,7 +11,8 @@ const sleep = (delay: number) => {
 	});
 };
 
-axios.defaults.baseURL = 'http://192.168.0.150:5000/api';
+//axios.defaults.baseURL = 'http://192.168.0.150:5000/api';
+axios.defaults.baseURL = 'http://10.0.2.6:5000/api';
 
 axios.interceptors.response.use(async (response) => {
 	try {
