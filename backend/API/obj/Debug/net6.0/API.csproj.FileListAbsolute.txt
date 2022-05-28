@@ -325,3 +325,4 @@ D:/Users/giova/Desktop/ventas-online-bd2/backend/API/obj/Debug/net6.0/ref/API.dl
 /home/umgdeveloper/ventas-online-bd2/backend/API/obj/Debug/net6.0/API.pdb
 /home/umgdeveloper/ventas-online-bd2/backend/API/obj/Debug/net6.0/API.genruntimeconfig.cache
 /home/umgdeveloper/ventas-online-bd2/backend/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.Certificate.dll
+/home/gm/Downloads/ventas-online-bd2/backend/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.Certificate.dll
