@@ -64,16 +64,6 @@ app.UseRouting();
 app.Urls.Add("http://10.0.2.6:5000");
 app.Urls.Add("https://10.0.2.6:5001");
 
-//app.Urls.Add("http://127.0.0.1:5000");
-//app.Urls.Add("https://127.0.0.1:5001");
-//app.Urls.Add("https://127.0.0.1:5001");
-
-//app.Urls.Add("https://localhost:5001");
-//app.Urls.Add("http://localhost:5000");
-
-//app.Urls.Add("http://20.228.215.6:5000");
-//app.Urls.Add("https://20.228.215.6:5001");
-
 //app.Urls.Add("http://192.168.0.150:5000");
 //app.Urls.Add("https://192.168.0.150:5001");
 

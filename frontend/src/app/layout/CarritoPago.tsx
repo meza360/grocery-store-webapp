@@ -140,7 +140,7 @@ function CarritoPago() {
 																	disabled
 																/>
 															</FormGroup>
-															{totalPedido != 0
+															{totalPedido == 0
 															? <Button 
 															type='button'
 															className="btn btn-outline-dark mt-20"

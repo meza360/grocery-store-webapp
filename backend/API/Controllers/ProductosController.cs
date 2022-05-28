@@ -6,6 +6,7 @@ using Domain;
 using Application.Productos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
+using API.DTOs;
 
 namespace API.Controllers
 {
@@ -23,5 +24,14 @@ namespace API.Controllers
         public async Task<ActionResult<Producto>> GetProducto(int id){
             return await Mediator.Send(new Detalles.Query{Id=id});
         }
+
+
+        /* [HttpPost("compra")]
+        public async Task<ActionResult> Comprar(CompraDto compraDto, UserDto cliente){
+
+
+
+            return Ok();
+        } */
     }
 }

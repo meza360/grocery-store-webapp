@@ -23,7 +23,7 @@ namespace API.Controllers
         public AccountController(SignInManager<Cliente> signInManager)
         {
             _signInManager = signInManager;
-            //_connectionString = "User Id=GMEZAP;Password=developer;Data Source=//192.168.0.150:1521/stigtpdb2";
+            //_connectionString = "User Id=UMGPDB1;Password=developer;Data Source=//192.168.0.150:1521/stigtpdb2";
             _connectionString = "User Id=UMGPDB1;Password=UMGPDB1;Data Source=//10.0.2.4:1521/umgpdb1.umg";
             _connection = new OracleConnection(_connectionString);
             
@@ -70,10 +70,6 @@ namespace API.Controllers
 
                 }
                 
-                
-                //var result = await _signInManager.CheckPasswordSignInAsync(usuario, loginDto.password,false);
-
-                
                 if (result)
                 {
                     return new UserDto{
@@ -87,17 +83,7 @@ namespace API.Controllers
                     };
                 }
                 await _connection.CloseAsync();
-                /* if (result.Succeeded)
-                {
-                    return new UserDto{
-                        nitCliente = usuario.nitCliente,
-                        nombresCliente = usuario.nombresCliente,
-                        apellidosCliente = usuario.apellidosCliente,
-                        telefono = usuario.telefono,
-                        direccionEntrega = usuario.correo,
-                        noTarjeta = usuario.noTarjeta
-                    };
-                } */
+
             }
             catch (System.Exception ex)
             {
@@ -134,16 +120,7 @@ namespace API.Controllers
 
                 while(rd.Read()){
                 var usuario = new Cliente();
-                /* usuario.nitCliente = rd.GetInt32(0);
-                usuario.nombresCliente = rd.GetString(1);
-                usuario.apellidosCliente = rd.GetString(2);
-                usuario.telefono = rd.GetString(3); */
                 usuario.correo = rd.GetString(4);
-                
-                /* usuario.direccionEntrega = rd.GetString(5);
-                usuario.noTarjeta = rd.GetString(6);
-                usuario.nacionalidad = rd.GetInt32(7);
-                usuario.password = rd.GetString(8); */
                 await rd.CloseAsync();
                 System.Console.WriteLine("'Usuario encontrado: '" + usuario.correo.ToString());
                 await _connection.CloseAsync();
@@ -160,77 +137,44 @@ namespace API.Controllers
 
                 }
                 System.Console.WriteLine(result.ToString());
+
                 if(result)
                 {
                     Console.WriteLine(regDto.correo.ToUpper());
-                    //Console.WriteLine(usuario.correo.ToString().ToUpper());
                     await _connection.CloseAsync();
-                     /* if (((regDto.correo).ToUpper() != (usuario.correo)) && String.IsNullOrEmpty(usuario.correo.ToString())) */
                     result = true;
+                    _command.Connection = _connection;
+                     await _connection.OpenAsync();
                     Console.WriteLine("Nuevo registro de cliente: " + regDto.correo + ", Nombre: " + regDto.nombresCliente);
                     
-                        _command.Connection = _connection;
-                                        await _connection.OpenAsync();
+                        
+                       
 
-                                        _command.CommandText = "UMGPDB1.SP_CREACION_USUARIO"; 
-                                        _command.CommandType = System.Data.CommandType.StoredProcedure;
-                                        _command.Parameters.Add("INNIT", OracleDbType.Int32).Value = regDto.nitCliente;
-                                        _command.Parameters.Add("INNOMBRES", OracleDbType.Varchar2).Value = regDto.nombresCliente;
-                                        _command.Parameters.Add("INAPELLIDOS", OracleDbType.Varchar2).Value = regDto.apellidosCliente;
-                                        _command.Parameters.Add("INTELEFONO", OracleDbType.Varchar2).Value = regDto.telefono;
-                                        _command.Parameters.Add("INCORREO", OracleDbType.Varchar2).Value = regDto.correo.ToString().ToUpper();
-                                        _command.Parameters.Add("INDIRECCION", OracleDbType.Varchar2).Value = regDto.direccionEntrega;
-                                        _command.Parameters.Add("INTARJETA", OracleDbType.Varchar2).Value = regDto.noTarjeta;
-                                        _command.Parameters.Add("INPASSWORD", OracleDbType.Varchar2).Value = regDto.password;
+                        _command.CommandText = "UMGPDB1.SP_CREACION_CLIENTE"; 
+                        _command.CommandType = System.Data.CommandType.StoredProcedure;
+                        _command.Parameters.Add("INNIT", OracleDbType.Int32).Value = regDto.nitCliente;
+                        _command.Parameters.Add("INNOMBRES", OracleDbType.Varchar2).Value = regDto.nombresCliente;
+                        _command.Parameters.Add("INAPELLIDOS", OracleDbType.Varchar2).Value = regDto.apellidosCliente;
+                        _command.Parameters.Add("INTELEFONO", OracleDbType.Varchar2).Value = regDto.telefono;
+                        _command.Parameters.Add("INCORREO", OracleDbType.Varchar2).Value = regDto.correo.ToString().ToUpper();
+                        _command.Parameters.Add("INDIRECCION", OracleDbType.Varchar2).Value = regDto.direccionEntrega;
+                        _command.Parameters.Add("INTARJETA", OracleDbType.Varchar2).Value = regDto.noTarjeta;
+                        _command.Parameters.Add("INPASSWORD", OracleDbType.Varchar2).Value = regDto.password;
+                       
+                        _command.ExecuteNonQuery();
+                      
+                        _connection.Close();
 
-                                        //await _command.Connection.OpenAsync();
-                                        
-                                        await _command.ExecuteNonQueryAsync();
-                                        await _connection.CloseAsync();
-
-                                        return new UserDto{
-                                            nitCliente = regDto.nitCliente,
-                                            nombresCliente = regDto.nombresCliente,
-                                            apellidosCliente = regDto.apellidosCliente,
-                                            telefono = regDto.telefono,
-                                            correo = regDto.correo,
-                                            direccionEntrega = regDto.direccionEntrega,
-                                            noTarjeta = regDto.noTarjeta
-                                        };
-
-                                    
-                                    /* else {
-                                        System.Console.WriteLine("El usuario ya existe");
-                                    } */
-                                    
-                                    //var result = await _signInManager.CheckPasswordSignInAsync(usuario, loginDto.password,false);
-
-                                    
-                                    /* if (result)
-                                    {
-                                        return new UserDto{
-                                            nitCliente = regDto.nitCliente,
-                                            nombresCliente = regDto.nombresCliente,
-                                            apellidosCliente = regDto.apellidosCliente,
-                                            telefono = regDto.telefono,
-                                            correo = regDto.correo,
-                                            direccionEntrega = regDto.direccionEntrega,
-                                            noTarjeta = regDto.noTarjeta
-                                        };
-                                    } */
-                                    
-                                    /* if (result.Succeeded)
-                                    {
-                                        return new UserDto{
-                                            nitCliente = usuario.nitCliente,
-                                            nombresCliente = usuario.nombresCliente,
-                                            apellidosCliente = usuario.apellidosCliente,
-                                            telefono = usuario.telefono,
-                                            direccionEntrega = usuario.correo,
-                                            noTarjeta = usuario.noTarjeta
-                                        };
-                                    } */
-                    
+                            return new UserDto{
+                            nitCliente = regDto.nitCliente,
+                            nombresCliente = regDto.nombresCliente,
+                            apellidosCliente = regDto.apellidosCliente,
+                            telefono = regDto.telefono,
+                            correo = regDto.correo,
+                            direccionEntrega = regDto.direccionEntrega,
+                            noTarjeta = regDto.noTarjeta
+                        };
+  
                 }
                    
             }
