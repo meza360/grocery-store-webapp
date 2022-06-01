@@ -1,5 +1,7 @@
 # Grocery store
-## 3Layer architectura
+Grocery small website, intented to provide modern and highly available features, all hosted in Microsoft Azure.
+
+## 3Layer architecture
 
 ### API 
 #### C#/NetCore 6
@@ -11,4 +13,4 @@
 #### ReactJS/Typescript/MobX
 
 # Azure hosting preview(in maintenance)
-[link]:http://umg-appsite.eastus.cloudapp.azure.com/
+[Website](http://umg-appsite.eastus.cloudapp.azure.com/)
