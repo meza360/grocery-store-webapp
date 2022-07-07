@@ -1,5 +1,4 @@
-import { makeAutoObservable, runInAction } from 'mobx';
-import agent from '../api/agent';
+import { makeAutoObservable } from 'mobx';
 import { Empleado } from '../models/Empleado';
 
 export default class EmpleadoStore {

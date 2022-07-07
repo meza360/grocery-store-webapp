@@ -3,7 +3,7 @@
 # dependencies
 **/obj
 **/bin
-/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 
@@ -23,3 +23,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#Vscode
+**/.vscode
+**/.vs
+*.code-workspace

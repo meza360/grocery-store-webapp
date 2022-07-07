@@ -1,4 +1,3 @@
-import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { FormGroup, Image, Button, NavItem } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';

@@ -1,20 +1,14 @@
 import { Formik } from 'formik';
 import { observer } from 'mobx-react-lite';
-import React, { ChangeEvent, useState } from 'react';
-import { Image, InputGroup, Form, FormGroup, FormLabel, FormControl, Button, NavItem,Container } from 'react-bootstrap';
+import { Image, Form, FormGroup, FormLabel, FormControl, Button, NavItem,Container } from 'react-bootstrap';
 import { NavLink,Link } from 'react-router-dom';
 import { useStore } from '../stores/store';
 
 function CarritoPago() {
 	const { productoStore, clienteStore } = useStore();
-	const { listadoCarrito,totalCarrito,totalPedido,quitarCarrito } = productoStore;
-	const { logSucceded, user } = clienteStore;
-
-	const [ nombre, setNombre ] = useState('');
-	const [ direccion, setDireccion ] = useState('');
-	const [ tarjeta, setTarjeta ] = useState('');
+	const { listadoCarrito,totalPedido,quitarCarrito } = productoStore;
+	const { user } = clienteStore;
 	
-
 	return (
 		<Container className="page-wrapper">
 			<div className="checkout shopping">
@@ -25,7 +19,7 @@ function CarritoPago() {
 									initialValues={{nombre: user.nombresCliente + '' + user.apellidosCliente, direccion: user.direccionEntrega, tarjeta: user.noTarjeta}}
 									onSubmit={(values)=> productoStore.compra(values)}
 									>
-									{({handleSubmit,isSubmitting})=> (
+									{()=> (
 										<>
 										<div className="col-md-8">
 										<div className="block billing-details">

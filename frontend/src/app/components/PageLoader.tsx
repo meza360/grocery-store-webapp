@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react-lite';
-import React, { Fragment } from 'react';
 import { Container, Image, Spinner } from 'react-bootstrap';
 import ComponentLoader from '../../app/components/ComponentLoader';
 

@@ -1,12 +1,11 @@
-import React, { Fragment } from 'react';
 import { observer } from 'mobx-react-lite';
-import { NavItem, Button } from 'react-bootstrap';
+import { NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useStore } from '../stores/store';
 
 function NavegacionCuenta() {
 	const { clienteStore } = useStore();
-	const { user, logSucceded, logout } = clienteStore;
+	const { logout } = clienteStore;
 
 	return (
 		<div className="container">

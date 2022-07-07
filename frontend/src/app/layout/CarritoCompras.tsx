@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react-lite';
-import React from 'react';
 import { Button, Image, NavItem, FormControl } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import { useStore } from '../../app/stores/store';
