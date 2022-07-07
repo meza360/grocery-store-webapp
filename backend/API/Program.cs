@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Devart.Data.Oracle.Entity.Configuration;
 using Oracle.EntityFrameworkCore;
 using Persistence;
 using Microsoft.AspNetCore.Authentication.Certificate;
