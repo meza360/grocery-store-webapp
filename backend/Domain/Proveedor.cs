@@ -9,7 +9,7 @@ namespace Domain
     public class Proveedor
     {
         [Key]
-        public int Id_Proveedor { get; set; }
+        public int Nit { get; set; }
         public string Nombre { get; set; }
         public ICollection<Producto> Producto { get; set; }
     }

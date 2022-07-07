@@ -56,16 +56,16 @@ namespace Application.Productos
                     {
                     var _producto = new Producto();
                     _productos = new List<Producto>();
-                    _producto.skuId = rd.GetInt16(0);
-                    _producto.nombreProducto=rd.GetString(1);
-                    _producto.descripcion=rd.GetString(2);
-                    _producto.unidadMedida=rd.GetString(3);
-                    _producto.categoria = rd.GetString(4);
-                    _producto.precio=rd.GetDecimal(5);
-                    _producto.fechaProduccion=rd.GetDateTime(6);
-                    _producto.fechaCaducidad=rd.GetDateTime(7);
-                    _producto.proveedor=rd.GetString(8);
-                    _producto.origen=rd.GetString(9);
+                    _producto.SkuId = rd.GetInt16(0);
+                    _producto.NombreProducto=rd.GetString(1);
+                    _producto.Descripcion=rd.GetString(2);
+                    _producto.UnidadMedida=rd.GetString(3);
+                    _producto.Categoria = rd.GetString(4);
+                    _producto.Precio=rd.GetDecimal(5);
+                    _producto.FechaProduccion=rd.GetDateTime(6);
+                    _producto.FechaCaducidad=rd.GetDateTime(7);
+                    _producto.Proveedor=rd.GetString(8);
+                    _producto.Origen=rd.GetString(9);
                     _productos.Add(_producto);
                     }
                     

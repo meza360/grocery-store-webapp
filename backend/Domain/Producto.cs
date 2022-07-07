@@ -15,20 +15,17 @@ namespace Domain
     public class Producto
     {
         [Key]
-        public int skuId { get; set; }
-        public string nombreProducto { get; set; }
-        public string descripcion { get; set; }
-        public string unidadMedida { get; set; }
-        public string categoria { get; set; }
-        public decimal precio { get; set; }
-        public DateTime fechaProduccion { get; set; }
-        public DateTime fechaCaducidad { get; set; }
-        public string proveedor { get; set; }
-        public string origen { get; set; }
-        
-        //public ICollection<Proveedor> Proveedor { get; set; }
-
-
-
+        public int SkuId { get; set; }
+        public string NombreProducto { get; set; }
+        public string Descripcion { get; set; }
+        public int Activo { get; set; }
+        public string UnidadMedida { get; set; }
+        public string Categoria { get; set; }
+        public ICollection<Proveedor> Proveedor { get; set; }
+        /* public decimal Precio { get; set; }
+        public DateTime FechaProduccion { get; set; }
+        public DateTime FechaCaducidad { get; set; }
+        public string Proveedor { get; set; }
+        public string Origen { get; set; } */
     }
 }

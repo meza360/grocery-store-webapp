@@ -49,16 +49,16 @@ namespace Application.Productos
                     Console.WriteLine("Capa aplicacion, metodo ListarTodos ejecutandose");
                         while (rd.Read()){
                             var producto = new Producto();
-                            producto.skuId = rd.GetInt16(0);
-                            producto.nombreProducto=rd.GetString(1);
-                            producto.descripcion=rd.GetString(2);
-                            producto.unidadMedida=rd.GetString(3);
-                            producto.categoria = rd.GetString(4);
-                            producto.precio=rd.GetDecimal(5);
-                            producto.fechaProduccion=rd.GetDateTime(6);
-                            producto.fechaCaducidad=rd.GetDateTime(7);
-                            producto.proveedor=rd.GetString(8);
-                            producto.origen=rd.GetString(9);
+                            producto.SkuId = rd.GetInt16(0);
+                            producto.NombreProducto=rd.GetString(1);
+                            producto.Descripcion=rd.GetString(2);
+                            producto.UnidadMedida=rd.GetString(3);
+                            producto.Categoria = rd.GetString(4);
+                            producto.Precio=rd.GetDecimal(5);
+                            producto.FechaProduccion=rd.GetDateTime(6);
+                            producto.FechaCaducidad=rd.GetDateTime(7);
+                            producto.Proveedor=rd.GetString(8);
+                            producto.Origen=rd.GetString(9);
 
                             _productos.Add(producto);
                         }
