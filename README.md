@@ -25,7 +25,7 @@ PS D:\grocery-store-webapp\frontend> npm run build .\frontend\
 ```
 # Deploying
 See our guide in [linux-basic-administration](https://www.google.com) to deploy your app on a server environment using [Nginx](https://www.nginx.com/) and [NetCore Runtime Environment](https://dotnet.microsoft.com/en-us/download)
-## Clean architecture
+# Clean architecture
 * API/Application/Persistence/Domain - C#/NetCore 6
 * Database - Oracle 21g/Oracle 21c/Oracle RAC OneNode/ High Availability
 * Presentation - ReactJS/Typescript/MobX/React bootstrap
