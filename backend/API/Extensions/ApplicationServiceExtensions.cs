@@ -29,23 +29,11 @@ namespace API.Extensions
                     policy.WithOrigins("https://20.228.215.6");
                     policy.WithOrigins("http://umg-appsite.eastus.cloudapp.azure.com");
                 });
-               
             });
-
-            services.AddDbContext<DataContext>(opt =>{
-                     //opt.UseOracle(config.GetConnectionString("DevConnection"));
-                     opt.UseOracle(config.GetConnectionString("Rac1Connection"));
-                     
-            });
-            
             services.AddAutoMapper(typeof(Application.Core.MappingProfiles).Assembly);
-
             services.AddMediatR(typeof(Application.Productos.ListarTodos.Handler).Assembly);
     
              return services;
         }
-        
     }
-
-
 }
