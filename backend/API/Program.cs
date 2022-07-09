@@ -7,44 +7,48 @@ using Microsoft.Extensions.Hosting;
 using Oracle.EntityFrameworkCore;
 using Persistence;
 using Microsoft.AspNetCore.Authentication.Certificate;
+using Microsoft.Extensions.Configuration;
+using API.Data;
 
-var builder = WebApplication.CreateBuilder(args);
-
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+IConfiguration _config = builder.Configuration;
 // Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddApplicationServices(builder.Configuration);
-builder.Services.AddIdentityServices(builder.Configuration);
-//builder.Services.AddAuthentication(CertificateAuthenticationDefaults.AuthenticationScheme).AddCertificate();
-
-
-
-var app = builder.Build();
-
-
-//creating migrations automatically
-using var scope = app.Services.CreateScope();
-var services = scope.ServiceProvider;
-
+    builder.Services.AddControllers();
+{// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+}
+{//Adds Identity, Mapper, Validator to container
+    builder.Services.AddApplicationServices(_config);
+}
+{//Adds Identity services
+    builder.Services.AddIdentityServices(_config);
+}
+{//Adds Sqlite services to container, must be replaced with other service previous to production phase
+    builder.Services.AddSqLiteServices(_config);
+}
+WebApplication app = builder.Build();
+IServiceScope scope = app.Services.CreateScope();
+IServiceProvider services = scope.ServiceProvider;
+DataContext context = services.GetRequiredService<DataContext>();
 try
-{
-    var context = services.GetRequiredService<DataContext>();
-    //await context.Database.MigrateAsync();
-    
-    if (context.Database.EnsureCreated())
-    {
-        Console.WriteLine("La base de datos no esta creada");
-    }else
-    {
-        Console.WriteLine("La base de datos esta creada");
-    }
+{//creating migrations automatically 
+    await context.Database.EnsureDeletedAsync();
+    Console.WriteLine("Applying pending migrations");
+    await context.Database.EnsureCreatedAsync();
 }
 catch (Oracle.ManagedDataAccess.Client.OracleException ex)
 {
-    Console.WriteLine("Error en la creacion: \n" + ex.ToString());
+    Console.WriteLine("Error on db creation: \n" + ex.ToString());
+}
+catch(Exception ex)
+{
+    System.Console.WriteLine("Error message: " + ex.Message);
+    System.Console.WriteLine("Error from: " + ex.Source);
+    System.Console.WriteLine("Error details: " + ex.StackTrace);
+}
+finally{
+    await Seed.AddProducts(context);
 }
 
 // Configure the HTTP request pipeline.
@@ -56,21 +60,22 @@ if (app.Environment.IsDevelopment())
 
 //Routing and binding
 app.UseRouting();
-//app.UseHttpsRedirection();
-//app.UseAuthentication();
+app.UseHttpsRedirection();
 
 //Address to bind
+/*
+//Azure instance 
 app.Urls.Add("http://10.0.2.6:5000");
-app.Urls.Add("https://10.0.2.6:5001");
-
-//app.Urls.Add("http://192.168.0.150:5000");
-//app.Urls.Add("https://192.168.0.150:5001");
+app.Urls.Add("https://10.0.2.6:5001"); 
+*/
+/*
+//Local oracle instance 
+app.Urls.Add("http://192.168.0.150:5000");
+app.Urls.Add("https://192.168.0.150:5001"); 
+*/
 
 //Cross Object Resource Policy
 app.UseCors("CorsPolicy");
-
-//app.UseAuthorization();
-
+app.UseAuthorization();
 app.MapControllers();
-
-app.Run();
+app.Run("http://localhost:5000");
