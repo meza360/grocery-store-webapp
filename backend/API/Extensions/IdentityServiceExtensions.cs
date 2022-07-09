@@ -16,10 +16,12 @@ namespace API.Extensions
         {
              services.AddIdentityCore<Cliente>(opt => {
                  opt.Password.RequireDigit = true;
+                 opt.Password.RequiredLength = 8;
+                 opt.Password.RequireLowercase = true;
+                 opt.Password.RequireUppercase = true;
+                 opt.Password.RequireNonAlphanumeric = true;
              }).AddEntityFrameworkStores<DataContext>().AddSignInManager<SignInManager<Cliente>>();
-
              services.AddAuthentication();
-
              return services;
         }
     }
