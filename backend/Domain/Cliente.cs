@@ -9,15 +9,11 @@ namespace Domain
 {
     public class Cliente : IdentityUser
     {
-        [Key]
-        public int nitCliente { get; set; }
-        public string nombresCliente { get; set; }
-        public string apellidosCliente { get; set; }
-        public string telefono { get; set; }
-        public string correo { get; set; }
-        public string direccionEntrega { get; set; }
-        public string noTarjeta { get; set; }
-        public int nacionalidad { get; set; }
-        public string password { get; set; }
+        public int NitCliente { get; set; }
+        public string NombresCliente { get; set; }
+        public string ApellidosCliente { get; set; }
+        public string DireccionEntrega { get; set; }
+        public Pais PaisResidencia { get; set; } //Creates foreign key
+        public ICollection<Tarjeta> Tarjetas { get; set; } //Creates foreign key on oposite table N:1
     }
 }

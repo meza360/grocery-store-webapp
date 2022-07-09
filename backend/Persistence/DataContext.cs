@@ -13,7 +13,9 @@ namespace Persistence
         }
         public DbSet<Producto> Producto { get; set; }
         public DbSet<Proveedor> Proveedor { get; set; }
-
-        
+        public DbSet<Pais> Pais { get; set; }
+        public DbSet<Tarjeta> Tarjeta { get; set; }
+        public DbSet<Representante> Representante { get; set; } 
+        public DbSet<Lote> Lote { get; set; }
     }
 }

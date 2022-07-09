@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class RepresentanteProveedor
+    public class Representante
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
-        
+        public Proveedor Proveedor { get; set; }
+        public Pais PaisRepresentante { get; set; }
     }
 }
