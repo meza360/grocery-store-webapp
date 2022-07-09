@@ -61,11 +61,10 @@ namespace Application.Productos
                     _producto.Descripcion=rd.GetString(2);
                     _producto.UnidadMedida=rd.GetString(3);
                     _producto.Categoria = rd.GetString(4);
-                    _producto.Precio=rd.GetDecimal(5);
-                    _producto.FechaProduccion=rd.GetDateTime(6);
-                    _producto.FechaCaducidad=rd.GetDateTime(7);
-                    _producto.Proveedor=rd.GetString(8);
-                    _producto.Origen=rd.GetString(9);
+                    /* _producto.Precio=rd.GetDecimal(5); */
+                    /* _producto.FechaProduccion=rd.GetDateTime(6);
+                    _producto.FechaCaducidad=rd.GetDateTime(7); */
+                    /* _producto.Proveedor=rd.GetString(8); */
                     _productos.Add(_producto);
                     }
                     

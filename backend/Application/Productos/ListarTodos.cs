@@ -54,11 +54,11 @@ namespace Application.Productos
                             producto.Descripcion=rd.GetString(2);
                             producto.UnidadMedida=rd.GetString(3);
                             producto.Categoria = rd.GetString(4);
-                            producto.Precio=rd.GetDecimal(5);
+                            /* producto.Precio=rd.GetDecimal(5);
                             producto.FechaProduccion=rd.GetDateTime(6);
                             producto.FechaCaducidad=rd.GetDateTime(7);
                             producto.Proveedor=rd.GetString(8);
-                            producto.Origen=rd.GetString(9);
+                            producto.Origen=rd.GetString(9); */
 
                             _productos.Add(producto);
                         }

@@ -11,8 +11,8 @@ namespace API.DTOs
         public string nombresCliente { get; set; }
         public string apellidosCliente { get; set; }
         public string telefono { get; set; }
-        public string correo { get; set; }        public string direccionEntrega { get; set; }
-        public string noTarjeta { get; set; }
-        
+        public string correo { get; set; }
+        public string direccionEntrega { get; set; }
+        public string noTarjeta { get; set; }  
     }
 }

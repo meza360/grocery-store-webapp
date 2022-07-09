@@ -24,14 +24,5 @@ namespace API.Controllers
         public async Task<ActionResult<Producto>> GetProducto(int id){
             return await Mediator.Send(new Detalles.Query{Id=id});
         }
-
-
-        /* [HttpPost("compra")]
-        public async Task<ActionResult> Comprar(CompraDto compraDto, UserDto cliente){
-
-
-
-            return Ok();
-        } */
     }
 }
