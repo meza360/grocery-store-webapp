@@ -2,6 +2,14 @@
 Grocery store small website, intented to provide modern and highly available features, hosted in Microsoft Azure.
 # Azure hosting preview(under maintenance)
 [http://umg-appsite.eastus.cloudapp.azure.com/](http://umg-appsite.eastus.cloudapp.azure.com/)
+
+<img width=400px src="./thumbprints/Home.png" alt="Home page"/>
+<img width=400px src="./thumbprints/ProdDetails.png" alt="Product Details page"/>
+<img width=400px src="./thumbprints/ShoppingCart.png" alt="Shooping cart details page"/>
+<img width=400px src="./thumbprints/PaymentDetails.png" alt="Payment page"/>
+<img width=400px src="./thumbprints/AccountDetails.png" alt="Account payment methods details"/>
+<img width=400px src="./thumbprints/LoadingPage.png" alt="Page loader"/>
+
 # Features
 * PDF invoice generation.
 * Account management(Sign-up or Sign-in).
