@@ -36,51 +36,53 @@ namespace Application.Productos
 
             async Task<List<Producto>> IRequestHandler<Query, List<Producto>>.Handle(Query request, CancellationToken cancellationToken)
             {
-                try
-                    {
-                    _connection = new OracleConnection(_connectionString);
-                    await _connection.OpenAsync();
-                    Console.WriteLine("Conexion en la capa de aplicacion");
+                //try
+                //    {
+                //    _connection = new OracleConnection(_connectionString);
+                //    await _connection.OpenAsync();
+                //    Console.WriteLine("Conexion en la capa de aplicacion");
 
-                    _command = new OracleCommand(_commandString, _connection);
-                    _productos = new List<Producto>();
+                //    _command = new OracleCommand(_commandString, _connection);
+                //    _productos = new List<Producto>();
 
-                    OracleDataReader rd = _command.ExecuteReader();
-                    Console.WriteLine("Capa aplicacion, metodo ListarTodos ejecutandose");
-                        while (rd.Read()){
-                            var producto = new Producto();
-                            producto.SkuId = rd.GetInt16(0);
-                            producto.NombreProducto=rd.GetString(1);
-                            producto.Descripcion=rd.GetString(2);
-                            producto.UnidadMedida=rd.GetString(3);
-                            producto.Categoria = rd.GetString(4);
-                            /* producto.Precio=rd.GetDecimal(5);
-                            producto.FechaProduccion=rd.GetDateTime(6);
-                            producto.FechaCaducidad=rd.GetDateTime(7);
-                            producto.Proveedor=rd.GetString(8);
-                            producto.Origen=rd.GetString(9); */
+                //    OracleDataReader rd = _command.ExecuteReader();
+                //    Console.WriteLine("Capa aplicacion, metodo ListarTodos ejecutandose");
+                //        while (rd.Read()){
+                //            var producto = new Producto();
+                //            producto.SkuId = rd.GetInt16(0);
+                //            producto.NombreProducto=rd.GetString(1);
+                //            producto.Descripcion=rd.GetString(2);
+                //            producto.UnidadMedida=rd.GetString(3);
+                //            producto.Categoria = rd.GetString(4);
+                //            /* producto.Precio=rd.GetDecimal(5);
+                //            producto.FechaProduccion=rd.GetDateTime(6);
+                //            producto.FechaCaducidad=rd.GetDateTime(7);
+                //            producto.Proveedor=rd.GetString(8);
+                //            producto.Origen=rd.GetString(9); */
 
-                            _productos.Add(producto);
-                        }
-                    Console.WriteLine("Cerrando la conexion");
-                    await _connection.CloseAsync();
-                    Console.WriteLine("Conexion cerrada");
-                    }
-                    catch (OracleException err)
-                    {
-                        foreach (OracleError error in err.Errors) 
-                        {
-                            Console.WriteLine("Mensaje del error: " + error.Message);
-                            Console.WriteLine("Fuente del error: " + error.Source);       
-                        }
-                    }
-                    catch(Exception err)
-                    {
-                        Console.WriteLine("Error en ",err.Message.ToString());
-                        return null;
-                    }
-                    return _productos;
-                //return await _context.Producto.ToListAsync();
+                //            _productos.Add(producto);
+                //        }
+                //    Console.WriteLine("Cerrando la conexion");
+                //    await _connection.CloseAsync();
+                //    Console.WriteLine("Conexion cerrada");
+                //    }
+                //    catch (OracleException err)
+                //    {
+                //        foreach (OracleError error in err.Errors) 
+                //        {
+                //            Console.WriteLine("Mensaje del error: " + error.Message);
+                //            Console.WriteLine("Fuente del error: " + error.Source);       
+                //        }
+                //    }
+                //    catch(Exception err)
+                //    {
+                //        Console.WriteLine("Error en ",err.Message.ToString());
+                //        return null;
+                //    }
+                //    return _productos;
+                
+                
+                return await _context.Producto.ToListAsync();
             }
         }
     }
