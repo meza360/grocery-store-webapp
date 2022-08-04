@@ -10,18 +10,17 @@ using API.DTOs;
 
 namespace API.Controllers
 {
-    public class ProductoController : BaseController
+    public class ProductosController : BaseController
     {
         //Listado de productos
-        [EnableCors("CorsPolicy")]
         [HttpGet]
-        public async Task<ActionResult<List<Producto>>> GetProductos()
+        public async Task<ActionResult<List<Producto>>> ListarProductos()
         {
             return await Mediator.Send(new ListarTodos.Query());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Producto>> GetProducto(int id){
+        public async Task<ActionResult<Producto>> ObtenerProducto(int id){
             return await Mediator.Send(new Detalles.Query{Id=id});
         }
     }
