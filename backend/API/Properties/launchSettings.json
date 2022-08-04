@@ -12,9 +12,9 @@
 		"API": {
 			"commandName": "Project",
 			"dotnetRunMessages": true,
-			"launchBrowser": false,
+			"launchBrowser": true,
 			"launchUrl": "swagger",
-			"applicationUrl": "https://127.0.0.1:5001;http://127.0.0.1:5000",
+			"applicationUrl": "https://192.168.0.60:5001;http://192.168.0.60:5000",
 			"environmentVariables": {
 				"ASPNETCORE_ENVIRONMENT": "Development"
 			}
