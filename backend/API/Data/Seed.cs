@@ -140,13 +140,21 @@ namespace API.Data
                 DateTime maxDate = DateTime.Now.AddMonths(randomGenerator.Next(1,12));
                 loteInicial.Add(new Lote{Producto=productos.ElementAt(i),Proveedor=proveedores.ElementAt(i),PrecioCompra=price,PrecioVenta=priceRetail,FechaProduccion=minDate,FechaCaducidad=maxDate,Cantidad=randomGenerator.Next(100,350)});
             }
-
-            await context.Pais.AddRangeAsync(paises);
-            await context.Producto.AddRangeAsync(productos);
-            await context.Proveedor.AddRangeAsync(proveedores);
-            await context.Representante.AddRangeAsync(representantes);
-            await context.Lote.AddRangeAsync(loteInicial);
-            await context.SaveChangesAsync();
+            try
+            {
+                await context.Pais.AddRangeAsync(paises);
+                await context.Producto.AddRangeAsync(productos);
+                await context.Proveedor.AddRangeAsync(proveedores);
+                await context.Representante.AddRangeAsync(representantes);
+                await context.Lote.AddRangeAsync(loteInicial);
+                await context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine("Error message: " + ex.Message);
+                System.Console.WriteLine("Error from: " + ex.Source);
+                System.Console.WriteLine("Error details: " + ex.StackTrace);
+            }
             return;
         }
     }

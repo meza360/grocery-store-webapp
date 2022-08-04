@@ -1,14 +1,13 @@
 using System;
 using API.Extensions;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Oracle.EntityFrameworkCore;
 using Persistence;
-using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.Extensions.Configuration;
 using API.Data;
+using Oracle.ManagedDataAccess.Client;
+using Microsoft.Data.SqlClient;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 IConfiguration _config = builder.Configuration;
@@ -24,8 +23,11 @@ IConfiguration _config = builder.Configuration;
 {//Adds Identity services
     builder.Services.AddIdentityServices(_config);
 }
-{//Adds Sqlite services to container, must be replaced with other service previous to production phase
+/* {//Adds Sqlite services to container, must be replaced with other service previous to production phase
     builder.Services.AddSqLiteServices(_config);
+} */
+{//Adds SqlServer services to container
+    builder.Services.AddSqlServerServices(_config);
 }
 WebApplication app = builder.Build();
 IServiceScope scope = app.Services.CreateScope();
@@ -37,9 +39,17 @@ try
     Console.WriteLine("Applying pending migrations");
     await context.Database.EnsureCreatedAsync();
 }
-catch (Oracle.ManagedDataAccess.Client.OracleException ex)
+catch (OracleException jdbcex)
 {
-    Console.WriteLine("Error on db creation: \n" + ex.ToString());
+    System.Console.WriteLine("Error message: " + jdbcex.Message);
+    System.Console.WriteLine("Error from: " + jdbcex.Source);
+    System.Console.WriteLine("Error details: " + jdbcex.StackTrace);
+}
+catch(SqlException odbc)
+{
+    System.Console.WriteLine("Error message: " + odbc.Message);
+    System.Console.WriteLine("Error from: " + odbc.Source);
+    System.Console.WriteLine("Error details: " + odbc.StackTrace);
 }
 catch(Exception ex)
 {
@@ -47,6 +57,7 @@ catch(Exception ex)
     System.Console.WriteLine("Error from: " + ex.Source);
     System.Console.WriteLine("Error details: " + ex.StackTrace);
 }
+
 finally{
     await Seed.AddProducts(context);
 }
@@ -73,9 +84,11 @@ app.Urls.Add("https://10.0.2.6:5001");
 app.Urls.Add("http://192.168.0.150:5000");
 app.Urls.Add("https://192.168.0.150:5001"); 
 */
+//app.Urls.Add("http://192.168.0.60:5000");
+//app.Urls.Add("https://192.168.0.60:5001");
 
 //Cross Object Resource Policy
 app.UseCors("CorsPolicy");
 app.UseAuthorization();
 app.MapControllers();
-app.Run("http://localhost:5000");
+app.Run();

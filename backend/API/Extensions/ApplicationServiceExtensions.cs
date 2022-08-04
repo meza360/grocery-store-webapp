@@ -17,7 +17,7 @@ namespace API.Extensions
             services.AddCors(opt => {
                 opt.AddPolicy("CorsPolicy", policy =>{
                     policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-                    policy.WithOrigins("http://192.168.0.150:3000");
+                    /* policy.WithOrigins("http://192.168.0.150:3000");
                     policy.WithOrigins("http://10.0.2.6:3000");
                     policy.WithOrigins("https://10.0.2.6:3000");
                     policy.WithOrigins("http://oddbbsrv01:3000");
@@ -27,7 +27,7 @@ namespace API.Extensions
                     policy.WithOrigins("https://127.0.0.1:3000");
                     policy.WithOrigins("http://20.228.215.6");
                     policy.WithOrigins("https://20.228.215.6");
-                    policy.WithOrigins("http://umg-appsite.eastus.cloudapp.azure.com");
+                    policy.WithOrigins("http://umg-appsite.eastus.cloudapp.azure.com"); */
                 });
             });
             services.AddAutoMapper(typeof(Application.Core.MappingProfiles).Assembly);
