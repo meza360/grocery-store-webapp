@@ -57,11 +57,11 @@ catch(Exception ex)
     System.Console.WriteLine("Error from: " + ex.Source);
     System.Console.WriteLine("Error details: " + ex.StackTrace);
 }
-
 finally{
-    await Seed.AddProducts(context);
+   // await Seed.AddProducts(context);
 }
 
+app.UseMiddleware<ExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
