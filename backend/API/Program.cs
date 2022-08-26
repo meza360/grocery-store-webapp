@@ -8,11 +8,19 @@ using Microsoft.Extensions.Configuration;
 using API.Data;
 using Oracle.ManagedDataAccess.Client;
 using Microsoft.Data.SqlClient;
+using API.Middleware;
+using FluentValidation.AspNetCore;
+using Application.Productos;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 IConfiguration _config = builder.Configuration;
-// Add services to the container.
-    builder.Services.AddControllers();
+
+//Adds services to the container.
+{
+    builder.Services.AddControllers().AddFluentValidation(config => {
+        config.RegisterValidatorsFromAssemblyContaining<Crear>();
+    });
+}
 {// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
@@ -57,11 +65,11 @@ catch(Exception ex)
     System.Console.WriteLine("Error from: " + ex.Source);
     System.Console.WriteLine("Error details: " + ex.StackTrace);
 }
-
 finally{
-    await Seed.AddProducts(context);
+   await Seed.AddProducts(context);
 }
 
+app.UseMiddleware<ExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -73,21 +81,18 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 app.UseHttpsRedirection();
 
-//Address to bind
 /*
 //Azure instance 
 app.Urls.Add("http://10.0.2.6:5000");
 app.Urls.Add("https://10.0.2.6:5001"); 
 */
+
 /*
 //Local oracle instance 
 app.Urls.Add("http://192.168.0.150:5000");
 app.Urls.Add("https://192.168.0.150:5001"); 
 */
-//app.Urls.Add("http://192.168.0.60:5000");
-//app.Urls.Add("https://192.168.0.60:5001");
 
-//Cross Object Resource Policy
 app.UseCors("CorsPolicy");
 app.UseAuthorization();
 app.MapControllers();

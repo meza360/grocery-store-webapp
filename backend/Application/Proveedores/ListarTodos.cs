@@ -15,8 +15,6 @@ namespace Application.Proveedores
         public class Query : IRequest<List<Proveedor>>{
 
         }
-
-
         public class Handler : IRequestHandler<Query, List<Proveedor>>
         {
         private readonly DataContext _context;
@@ -27,7 +25,7 @@ namespace Application.Proveedores
 
             public async Task<List<Proveedor>> Handle(Query request, CancellationToken cancellationToken)
             {
-                return await _context.Proveedor.ToListAsync();
+                return await _context.Proveedores.ToListAsync();
             }
         }
     }

@@ -26,7 +26,7 @@ namespace Application.Proveedores
 
             public async Task<Proveedor> Handle(Query request, CancellationToken cancellationToken)
             {
-                return await _context.Proveedor.FindAsync(request.Id);
+                return await _context.Proveedores.FindAsync(request.Id);
             }
         }
 
