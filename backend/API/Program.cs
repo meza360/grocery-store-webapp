@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using API.Data;
 using Oracle.ManagedDataAccess.Client;
 using Microsoft.Data.SqlClient;
+using API.Middleware;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 IConfiguration _config = builder.Configuration;

@@ -143,8 +143,8 @@ namespace API.Data
             try
             {
                 await context.Pais.AddRangeAsync(paises);
-                await context.Producto.AddRangeAsync(productos);
-                await context.Proveedor.AddRangeAsync(proveedores);
+                await context.Productos.AddRangeAsync(productos);
+                await context.Proveedores.AddRangeAsync(proveedores);
                 await context.Representante.AddRangeAsync(representantes);
                 await context.Lote.AddRangeAsync(loteInicial);
                 await context.SaveChangesAsync();

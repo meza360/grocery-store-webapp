@@ -11,8 +11,8 @@ namespace Persistence
         public DataContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Producto> Producto { get; set; }
-        public DbSet<Proveedor> Proveedor { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Pais> Pais { get; set; }
         public DbSet<Tarjeta> Tarjeta { get; set; }
         public DbSet<Representante> Representante { get; set; } 
