@@ -21,7 +21,6 @@ namespace Application.Productos
         public class Handler : IRequestHandler<Query, Result<List<Producto>>>
         {
             private readonly DataContext _context;
-            private List<Producto> _productos;
             public Handler(DataContext context){
                 _context = context;
             }

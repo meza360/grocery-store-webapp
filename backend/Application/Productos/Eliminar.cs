@@ -13,7 +13,7 @@ namespace Application.Productos
     {
         public class Command : IRequest<Result<Unit>>
         {
-            public int Id { get; set; }
+            public int SkuId { get; set; }
         }
 
         public class Handler : IRequestHandler<Command, Result<Unit>>
@@ -26,11 +26,10 @@ namespace Application.Productos
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var producto = await _context.Productos.FindAsync(request.Id);
-                //if (producto == null) return null;
+                var producto = await _context.Productos.FindAsync(request.SkuId);
                 _context.Productos.Remove(producto);
                 var result = await _context.SaveChangesAsync() > 0;
-                if(!result) return Result<Unit>.Failure($"Failed to delete the requested product, {request.Id}");
+                if(!result) return Result<Unit>.Failure($"Failed to delete the requested product, {request.SkuId}");
                 return Result<Unit>.Success(Unit.Value);
             }
         }
