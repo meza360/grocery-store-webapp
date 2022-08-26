@@ -81,19 +81,17 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 app.UseHttpsRedirection();
 
-//Address to bind
 /*
 //Azure instance 
 app.Urls.Add("http://10.0.2.6:5000");
 app.Urls.Add("https://10.0.2.6:5001"); 
 */
+
 /*
 //Local oracle instance 
 app.Urls.Add("http://192.168.0.150:5000");
 app.Urls.Add("https://192.168.0.150:5001"); 
 */
-//app.Urls.Add("http://192.168.0.60:5000");
-//app.Urls.Add("https://192.168.0.60:5001");
 
 app.UseCors("CorsPolicy");
 app.UseAuthorization();
